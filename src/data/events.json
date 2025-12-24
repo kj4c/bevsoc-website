@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1",
+    "title": "Welcome Back BBQ",
+    "date": "2025-02-15",
+    "time": "5:00 PM",
+    "location": "Campus Lawn",
+    "description": "Kick off the semester with drinks and BBQ! Meet new members and catch up with friends~",
+    "image": "/events/bbq.jpg",
+    "category": "social"
+  },
+  {
+    "id": "2",
+    "title": "Coffee Tasting Workshop",
+    "date": "2025-02-22",
+    "time": "2:00 PM",
+    "location": "Student Center Room 101",
+    "description": "Learn about different coffee origins and brewing methods with our expert barista!",
+    "image": "/events/coffee.jpg",
+    "category": "workshop"
+  },
+  {
+    "id": "3",
+    "title": "Wine & Cheese Night",
+    "date": "2025-03-08",
+    "time": "7:00 PM",
+    "location": "Faculty Club",
+    "description": "An elegant evening of wine tasting paired with artisanal cheeses. 21+ only!",
+    "image": "/events/wine.jpg",
+    "category": "tasting"
+  },
+  {
+    "id": "4",
+    "title": "Boba Crawl",
+    "date": "2025-03-15",
+    "time": "1:00 PM",
+    "location": "Meet at Main Gate",
+    "description": "Join us as we explore the best bubble tea spots around campus! 🧋",
+    "image": "/events/boba.jpg",
+    "category": "social"
+  }
+]
+
