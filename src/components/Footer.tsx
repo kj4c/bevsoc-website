@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="pixel-window p-2 bg-[var(--primary)] border-2 border-[var(--accent-dark)]" style={{ boxShadow: 'none' }}>
-                <span className="font-pixel-title text-[var(--accent)] text-sm">BEV<br/>SOC</span>
+                <span className="font-bubbly-title text-[var(--accent)] text-sm">BEV<br/>SOC</span>
               </div>
             </Link>
             <p className="text-[var(--pink-light)] font-pixel text-lg max-w-md">
@@ -20,7 +20,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[var(--primary)] font-pixel text-xl mb-4">Quick Links</h3>
+            <h3 className="text-[var(--primary)] font-bubbly-title text-xl mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {['Home', 'About Us', 'Sponsors', 'Events'].map((item) => (
                 <li key={item}>
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="text-[var(--primary)] font-pixel text-xl mb-4">Connect</h3>
+            <h3 className="text-[var(--primary)] font-bubbly-title text-xl mb-4">Connect</h3>
             <div className="flex gap-3">
               <a
                 href="https://discord.gg/bevsoc"

@@ -16,18 +16,18 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--accent)] border-b-4 border-[var(--accent-dark)]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-accent border-b-4 border-accent-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="pixel-window p-2 bg-[var(--primary)] border-2 border-[var(--accent-dark)]" style={{ boxShadow: 'none' }}>
-              <span className="font-pixel-title text-[var(--accent)] text-sm">BEV<br/>SOC</span>
+            <div className="p-2" style={{ boxShadow: 'none' }}>
+              <span className="font-bubbly-title text-primary text-sm">BevSoc</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -36,8 +36,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`font-pixel text-xl px-4 py-2 transition-all duration-200
                     ${isActive 
-                      ? 'text-[var(--primary)] bg-[var(--accent-dark)]' 
-                      : 'text-[var(--pink-light)] hover:text-white hover:bg-[var(--accent-light)]'
+                      ? 'text-primary' 
+                      : 'text-pink-light hover:text-white'
                     }`}
                 >
                   {link.label}

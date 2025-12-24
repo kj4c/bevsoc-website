@@ -142,7 +142,7 @@ export default function AdminPage() {
     return (
       <div className="min-h-screen bg-[var(--primary)] flex items-center justify-center p-4">
         <div className="pixel-window p-8 max-w-md w-full">
-          <h1 className="font-pixel-title text-lg text-[var(--accent)] text-center mb-6">
+          <h1 className="font-bubbly-title text-lg text-[var(--accent)] text-center mb-6">
             🔒 Admin Login
           </h1>
           
@@ -183,7 +183,7 @@ export default function AdminPage() {
         <Sparkles />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <div className="pixel-window p-6">
-            <h1 className="font-pixel-title text-xl text-[var(--accent)] mb-2">
+            <h1 className="font-bubbly-title text-xl text-[var(--accent)] mb-2">
               Admin Panel
             </h1>
             <p className="font-pixel text-lg text-[var(--foreground)]">
@@ -206,7 +206,7 @@ export default function AdminPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Event Form */}
           <div className="pixel-window p-6">
-            <h2 className="font-pixel-title text-sm text-[var(--accent)] mb-6">
+            <h2 className="font-bubbly-title text-sm text-[var(--accent)] mb-6">
               {editingEvent ? '✏️ Edit Event' : '➕ Add New Event'}
             </h2>
 
@@ -316,7 +316,7 @@ export default function AdminPage() {
 
           {/* Events List */}
           <div className="pixel-window p-6">
-            <h2 className="font-pixel-title text-sm text-[var(--accent)] mb-6">
+            <h2 className="font-bubbly-title text-sm text-[var(--accent)] mb-6">
               📋 All Events
             </h2>
 
@@ -337,7 +337,7 @@ export default function AdminPage() {
                   >
                     <div className="flex justify-between items-start gap-4">
                       <div className="flex-1">
-                        <h3 className="font-pixel text-lg text-[var(--accent)] font-bold">
+                        <h3 className="font-bubbly-title text-lg text-[var(--accent)] font-bold">
                           {event.title}
                         </h3>
                         <p className="font-pixel text-sm text-[var(--foreground)]">

@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+const superBubbly = localFont({
+  src: "./fonts/SuperBubbly-G35nA.ttf",
+  variable: "--font-bubbly",
+  display: "swap",
+});
+
+const stayPixel = localFont({
+  src: "./fonts/StayPixelRegular-EaOxl.ttf",
+  variable: "--font-pixel",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} antialiased`}>
+      <body className={`${superBubbly.variable} ${stayPixel.variable} antialiased`}>
         <Navbar />
         <main className="pt-16 min-h-screen">
           {children}

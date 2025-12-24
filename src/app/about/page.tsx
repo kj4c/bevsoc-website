@@ -17,7 +17,7 @@ export default function AboutPage() {
         <Sparkles />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="pixel-window p-8">
-            <h1 className="font-pixel-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
+            <h1 className="font-bubbly-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
               About Us
             </h1>
             <p className="font-pixel text-xl text-[var(--foreground)]">
@@ -31,7 +31,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="pixel-window p-8">
-            <h2 className="font-pixel-title text-lg text-[var(--accent)] mb-6">
+            <h2 className="font-bubbly-title text-lg text-[var(--accent)] mb-6">
               Our Mission 💕
             </h2>
             <div className="space-y-4 font-pixel text-lg text-[var(--foreground)] leading-relaxed">
@@ -55,7 +55,7 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="py-20 bg-[var(--cream)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-pixel-title text-lg text-[var(--accent)] text-center mb-12">
+          <h2 className="font-bubbly-title text-lg text-[var(--accent)] text-center mb-12">
             Our Values ✦
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -67,7 +67,7 @@ export default function AboutPage() {
             ].map((value) => (
               <div key={value.title} className="pixel-window p-6 text-center">
                 <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="font-pixel-title text-xs text-[var(--accent)] mb-2">
+                <h3 className="font-bubbly-title text-xs text-[var(--accent)] mb-2">
                   {value.title}
                 </h3>
                 <p className="font-pixel text-lg text-[var(--foreground)]">
@@ -82,7 +82,7 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-pixel-title text-lg text-[var(--accent)] text-center mb-12">
+          <h2 className="font-bubbly-title text-lg text-[var(--accent)] text-center mb-12">
             Meet the Team 🐻
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -90,7 +90,7 @@ export default function AboutPage() {
               <div key={member.name} className="pixel-window p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-[var(--accent)] border-4 border-[var(--accent-dark)] flex items-center justify-center">
-                    <span className="font-pixel-title text-xs text-[var(--primary)]">
+                    <span className="font-bubbly-title text-xs text-[var(--primary)]">
                       {member.initials}
                     </span>
                   </div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       <section className="py-20 bg-[var(--accent)] relative overflow-hidden">
         <Sparkles />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-pixel-title text-lg text-[var(--primary)] mb-6">
+          <h2 className="font-bubbly-title text-lg text-[var(--primary)] mb-6">
             Want to Join? ✨
           </h2>
           <p className="font-pixel text-xl text-[var(--pink-light)] mb-8">

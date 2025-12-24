@@ -24,9 +24,7 @@
   --color-cream: var(--cream);
   --color-pink: var(--pink);
   --color-pink-light: var(--pink-light);
-  --font-sans: var(--font-sora);
-  --font-pixel: 'VT323', monospace;
-  --font-pixel-title: 'Press Start 2P', cursive;
+  --font-sans: var(--font-pixel);
 }
 
 body {
@@ -37,11 +35,21 @@ body {
 
 /* Pixel font classes */
 .font-pixel {
-  font-family: 'VT323', monospace;
+  font-family: var(--font-pixel), monospace;
 }
 
 .font-pixel-title {
-  font-family: 'Press Start 2P', cursive;
+  font-family: var(--font-pixel), monospace;
+}
+
+/* Bubbly font classes */
+.font-bubbly {
+  font-family: var(--font-bubbly), system-ui, sans-serif;
+}
+
+.font-bubbly-title {
+  font-family: var(--font-bubbly), system-ui, sans-serif;
+  font-size: 40px;
 }
 
 /* Smooth scrolling */
@@ -75,7 +83,7 @@ html {
   color: white;
   border: none;
   padding: 12px 24px;
-  font-family: 'VT323', monospace;
+  font-family: var(--font-pixel), monospace;
   font-size: 1.25rem;
   cursor: pointer;
   box-shadow: 

@@ -33,7 +33,7 @@ export default function EventsPage() {
         <Sparkles />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="pixel-window p-8">
-            <h1 className="font-pixel-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
+            <h1 className="font-bubbly-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
               Events
             </h1>
             <p className="font-pixel text-xl text-[var(--foreground)]">
@@ -46,7 +46,7 @@ export default function EventsPage() {
       {/* Upcoming Events */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-pixel-title text-lg text-[var(--accent)] text-center mb-8">
+          <h2 className="font-bubbly-title text-lg text-[var(--accent)] text-center mb-8">
             ✨ Upcoming Events ✨
           </h2>
           
@@ -78,7 +78,7 @@ export default function EventsPage() {
       {pastEvents.length > 0 && (
         <section className="py-16 bg-[var(--cream)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-pixel-title text-lg text-[var(--accent)] text-center mb-8">
+            <h2 className="font-bubbly-title text-lg text-[var(--accent)] text-center mb-8">
               📸 Past Events
             </h2>
             
@@ -102,7 +102,7 @@ export default function EventsPage() {
       <section className="py-20 bg-[var(--accent)] relative overflow-hidden">
         <Sparkles />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-pixel-title text-lg text-[var(--primary)] mb-6">
+          <h2 className="font-bubbly-title text-lg text-[var(--primary)] mb-6">
             Never Miss an Event! 📅
           </h2>
           <p className="font-pixel text-xl text-[var(--pink-light)] mb-8">

@@ -52,7 +52,7 @@ export default function EventCard({
       </div>
 
       {/* Title */}
-      <h3 className="font-pixel-title text-sm text-[var(--accent)] mb-3 leading-relaxed">
+      <h3 className="font-bubbly-title text-sm text-[var(--accent)] mb-3 leading-relaxed">
         {title}
       </h3>
 

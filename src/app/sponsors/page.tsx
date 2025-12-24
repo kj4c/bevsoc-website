@@ -26,7 +26,7 @@ export default function SponsorsPage() {
         <Sparkles />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="pixel-window p-8">
-            <h1 className="font-pixel-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
+            <h1 className="font-bubbly-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
               Our Sponsors
             </h1>
             <p className="font-pixel text-xl text-[var(--foreground)]">
@@ -39,7 +39,7 @@ export default function SponsorsPage() {
       {/* Gold Sponsors */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-pixel-title text-lg text-[#FFD700] text-center mb-8 flex items-center justify-center gap-2">
+          <h2 className="font-bubbly-title text-lg text-[#FFD700] text-center mb-8 flex items-center justify-center gap-2">
             ⭐ Gold Sponsors ⭐
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -53,7 +53,7 @@ export default function SponsorsPage() {
                 }}
               >
                 <div className="w-20 h-20 mx-auto mb-4 bg-[#FFD700] border-4 border-[#B8860B] flex items-center justify-center">
-                  <span className="font-pixel-title text-2xl text-white">
+                  <span className="font-bubbly-title text-2xl text-white">
                     {sponsor.name.charAt(0)}
                   </span>
                 </div>
@@ -69,7 +69,7 @@ export default function SponsorsPage() {
       {/* Silver Sponsors */}
       <section className="py-16 bg-[var(--cream)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-pixel-title text-lg text-[#C0C0C0] text-center mb-8 flex items-center justify-center gap-2">
+          <h2 className="font-bubbly-title text-lg text-[#C0C0C0] text-center mb-8 flex items-center justify-center gap-2">
             ✦ Silver Sponsors ✦
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -83,7 +83,7 @@ export default function SponsorsPage() {
                 }}
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-[#C0C0C0] border-4 border-[#808080] flex items-center justify-center">
-                  <span className="font-pixel-title text-xl text-white">
+                  <span className="font-bubbly-title text-xl text-white">
                     {sponsor.name.charAt(0)}
                   </span>
                 </div>
@@ -99,7 +99,7 @@ export default function SponsorsPage() {
       {/* Bronze Sponsors */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-pixel-title text-lg text-[#CD7F32] text-center mb-8 flex items-center justify-center gap-2">
+          <h2 className="font-bubbly-title text-lg text-[#CD7F32] text-center mb-8 flex items-center justify-center gap-2">
             ♦ Bronze Sponsors ♦
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -113,11 +113,11 @@ export default function SponsorsPage() {
                 }}
               >
                 <div className="w-12 h-12 mx-auto mb-3 bg-[#CD7F32] border-3 border-[#8B4513] flex items-center justify-center">
-                  <span className="font-pixel-title text-sm text-white">
+                  <span className="font-bubbly-title text-sm text-white">
                     {sponsor.name.charAt(0)}
                   </span>
                 </div>
-                <h3 className="font-pixel text-base text-[var(--foreground)]">
+                <h3 className="font-bubbly-title text-base text-[var(--foreground)]">
                   {sponsor.name}
                 </h3>
               </div>
@@ -130,7 +130,7 @@ export default function SponsorsPage() {
       <section className="py-20 bg-[var(--accent)] relative overflow-hidden">
         <Sparkles />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-pixel-title text-lg text-[var(--primary)] mb-6">
+          <h2 className="font-bubbly-title text-lg text-[var(--primary)] mb-6">
             Want to Sponsor Us? ✨
           </h2>
           <p className="font-pixel text-xl text-[var(--pink-light)] mb-8">
