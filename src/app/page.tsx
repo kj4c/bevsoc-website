@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Sparkles from '@/components/Sparkles';
 import Bubbles from '@/components/Bubbles';
 import LiquidEther from '@/components/LiquidEther';
+import RotatingText from '@/components/RotatingText';
+import { motion, LayoutGroup } from 'motion/react';
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
         //   backgroundImage: 'url(/matcha.jpg)',
         // }}
       >
-        {/* <LiquidEther
+        <LiquidEther
           colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
           mouseForce={20}
           cursorSize={100}
@@ -29,8 +31,7 @@ export default function Home() {
           takeoverDuration={0.25}
           autoResumeDelay={3000}
           autoRampDuration={0.6}
-        /> */}
-        {/* <div className="absolute inset-0" style={{ backgroundColor: 'rgba(74, 45, 40, 0.15)' }}></div> */}
+        /> 
       </div>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -49,8 +50,31 @@ export default function Home() {
             </div>
           </div>
           
+          <LayoutGroup>
+            <motion.p className="flex items-center justify-center gap-5" layout>
+              <motion.span
+                className="text-accent font-perandory text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                layout
+                transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+              >
+                Sharing{'  '}
+              </motion.span>
+              <RotatingText
+                texts={['Warmth', 'matcha', 'tea', 'coffee', 'comfort', 'smiles', 'stories', 'sips', 'pints', 'culture', 'breaks']}
+                mainClassName="text-accent overflow-hidden font-perandory text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                staggerFrom={'last'}
+                initial={{ y: '100%' }}
+                animate={{ y: 0 }}
+                exit={{ y: '-120%' }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden"
+                transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
+              />
+            </motion.p>
+          </LayoutGroup>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
               href="/events" 
               className="px-8 py-4 bg-accent text-white rounded-full font-pixel text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-accent-dark shadow-lg"
@@ -68,7 +92,7 @@ export default function Home() {
             >
               💕 About Us
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
