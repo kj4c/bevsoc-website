@@ -7,9 +7,14 @@ import LiquidEther from '@/components/LiquidEther';
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <div className="fixed inset-0 -z-10">
-        <LiquidEther
-          colors={[ '#ffffff', '#e8ddd4', '#8a3347' ]}
+      <div 
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        // style={{ 
+        //   backgroundImage: 'url(/matcha.jpg)',
+        // }}
+      >
+        {/* <LiquidEther
+          colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
           mouseForce={20}
           cursorSize={100}
           isViscous={false}
@@ -24,50 +29,45 @@ export default function Home() {
           takeoverDuration={0.25}
           autoResumeDelay={3000}
           autoRampDuration={0.6}
-        />
+        /> */}
+        {/* <div className="absolute inset-0" style={{ backgroundColor: 'rgba(74, 45, 40, 0.15)' }}></div> */}
       </div>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
    
         
         {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Pixel Window */}
-          <div className="pixel-window p-8 md:p-12">
-            <div className="pixel-window-header -mx-8 md:-mx-12 -mt-8 md:-mt-12 mb-8 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="font-bubbly-title text-primary text-xs">BEV SOC</span>
-              </div>
-              <div className="flex gap-2">
-                <div className="w-4 h-4 border-2 border-accent-dark bg-primary"></div>
-                <div className="w-4 h-4 border-2 border-accent-dark bg-primary"></div>
-              </div>
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-center">
+          <div className="logo-container mb-6 text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+            <div className="top-row relative inline-block">
+              <span className="script-b" style={{ fontFamily: 'var(--font-amoresa), cursive' }}>B</span>
+              <span className="serif-rest" style={{ fontFamily: 'var(--font-perandory), serif' }}>EVERAGE</span>
+              <span className="unsw-tag" style={{ fontFamily: 'var(--font-poppins), sans-serif' }}>unsw</span>
             </div>
-            
-            <h1 className="font-bubbly-title text-2xl sm:text-3xl lg:text-4xl text-accent mb-6 leading-relaxed">
-              Welcome to<br />
-              <span className="text-accent-dark">BevSoc!</span>
-            </h1>
-            
-            <p className="font-pixel text-xl sm:text-2xl text-foreground mb-8">
-              ✨ The sweetest beverage appreciation society ✨<br/>
-              Join us for tastings, events, and good vibes~
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/events" className="pixel-btn">
-                🍹 View Events
-              </Link>
-              <Link
-                href="/about"
-                className="pixel-btn bg-cream text-accent"
-                style={{ 
-                  boxShadow: '4px 4px 0 var(--accent), inset -2px -2px 0 var(--pink), inset 2px 2px 0 white'
-                }}
-              >
-                💕 About Us
-              </Link>
+            <div className="bottom-row" style={{ fontFamily: 'var(--font-poppins), sans-serif bold' }}>
+              SOCIETY
             </div>
+          </div>
+          
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link 
+              href="/events" 
+              className="px-8 py-4 bg-accent text-white rounded-full font-pixel text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-accent-dark shadow-lg"
+              style={{ textShadow: '2px 2px 0px #4a1f2a' }}
+            >
+              🍹 View Events
+            </Link>
+            <Link
+              href="/about"
+              className="px-8 py-4 bg-transparent border-3 border-accent text-accent rounded-full font-pixel text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-accent hover:text-white shadow-lg"
+              style={{ 
+                borderWidth: '3px',
+                textShadow: '1px 1px 0px rgba(255,255,255,0.5)'
+              }}
+            >
+              💕 About Us
+            </Link>
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-        <section className="py-20 relative overflow-hidden">
+        {/* <section className="py-20 relative overflow-hidden">
         <Sparkles />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -141,7 +141,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">

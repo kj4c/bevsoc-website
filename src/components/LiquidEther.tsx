@@ -465,8 +465,9 @@ export default function LiquidEther({
 		vec2 vel = texture2D(velocity, uv).xy;
 		float lenv = clamp(length(vel), 0.0, 1.0);
 		vec3 c = texture2D(palette, vec2(lenv, 0.5)).rgb;
-		vec3 outRGB = mix(bgColor.rgb, c, lenv);
-		float outA = mix(bgColor.a, 1.0, lenv);
+		float opacity = smoothstep(0.0, 0.2, lenv);
+		vec3 outRGB = c;
+		float outA = opacity;
 		gl_FragColor = vec4(outRGB, outA);
 }
 `;
