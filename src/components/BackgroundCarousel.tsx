@@ -21,7 +21,7 @@ export default function BackgroundCarousel() {
     }, []);
 
     return (
-        <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 -z-10">
         <AnimatePresence initial={false}>
         <motion.div
             key={currentImageIndex}
@@ -37,7 +37,7 @@ export default function BackgroundCarousel() {
             className="absolute inset-0 w-full h-full object-cover"
             />
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black opacity-30"></div>
+            <div className="absolute inset-0 bg-black opacity-50"></div>
         </motion.div>
         </AnimatePresence>
         </div>

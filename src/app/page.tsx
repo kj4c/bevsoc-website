@@ -6,6 +6,8 @@ import RotatingText from '@/components/RotatingText';
 import { motion, LayoutGroup, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import LiquidEther from '@/components/LiquidEther';
+import BackgroundCarousel from '@/components/BackgroundCarousel';
+import { UsersRound, Wine } from 'lucide-react';
 
 const backgroundImages = [
   '/water.jpg',
@@ -20,10 +22,12 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen">
-      <div 
-        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-      >
-        <LiquidEther
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image Carousel - Only in Hero Section */}
+        <div className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat">
+          <BackgroundCarousel />
+            {/* <LiquidEther
           colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
           mouseForce={20}
           cursorSize={100}
@@ -39,19 +43,17 @@ export default function Home() {
           takeoverDuration={0.25}
           autoResumeDelay={3000}
           autoRampDuration={0.6}
-        /> 
-      </div>
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        />  */}
+        </div>
         {/* Content */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
           <div className="logo-container" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-            <div className="top-row relative inline-block text-accent-light">
+            <div className="top-row relative inline-block text-white">
               <span className="script-b" style={{ fontFamily: 'var(--font-amoresa), cursive' }}>B</span>
               <span className="serif-rest" style={{ fontFamily: 'var(--font-perandory), serif' }}>EVERAGE</span>
               <span className="unsw-tag" style={{ fontFamily: 'var(--font-poppins), sans-serif' }}>unsw</span>
             </div>
-            <div className="bottom-row text-accent-light" style={{ fontFamily: 'var(--font-poppins), sans-serif bold' }}>
+            <div className="bottom-row text-white" style={{ fontFamily: 'var(--font-poppins), sans-serif bold' }}>
               SOCIETY
             </div>
           </div>
@@ -116,41 +118,36 @@ export default function Home() {
       <section className="py-24 relative bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-bubbly-title text-xl sm:text-2xl text-accent mb-4">
+            <h2 className="font-perandory text-8xl sm:text-8xl text-primary mb-4">
               What We Offer
             </h2>
-            <p className="font-pixel text-xl text-foreground">
-              More than just drinks — we're building a community! 🌟
+            <p className="font-poppins text-4xl text-primary">
+              More than just drinks — we're building a community!
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
             {[
               {
-                icon: '👥',
+                icon: <UsersRound />,
                 title: 'Community',
                 description: 'Meet fellow beverage enthusiasts who love good drinks and great company!',
               },
               {
-                icon: '🎉',
+                icon: <Wine/>,
                 title: 'Events',
-                description: 'Exclusive tastings, workshops, and social gatherings throughout the year~',
-              },
-              {
-                icon: '📚',
-                title: 'Education',
-                description: 'Learn about brewing, flavor profiles, and the stories behind your fave drinks!',
+                description: 'Exclusive tastings, workshops, and social gatherings throughout the year!',
               },
             ].map((feature) => (
               <div
                 key={feature.title}
                 className="pixel-window p-6 hover:translate-y-[-4px] transition-transform duration-200"
               >
-                <div className="text-5xl mb-4">{feature.icon}</div>
-                <h3 className="font-bubbly-title text-sm text-accent mb-3">
+                <div className="w-5 h-5 mb-4">{feature.icon}</div>
+                <h3 className="font-perandory text-4xl text-accent mb-3 underline underline-1" >
                   {feature.title}
                 </h3>
-                <p className="font-pixel text-lg text-foreground">
+                <p className="font-poppins text-2xl text-accent-light">
                   {feature.description}
                 </p>
               </div>
@@ -185,13 +182,29 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
-        <Bubbles />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <LiquidEther
+          colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        /> 
           <div className="pixel-window p-8">
-            <h2 className="font-bubbly-title text-lg sm:text-xl text-accent mb-6">
-              Ready to Join? ✨
+            <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-6">
+              Ready to Join?
             </h2>
-            <p className="font-pixel text-xl text-foreground mb-8">
+            <p className="font-poppins text-xl text-foreground mb-8">
               Become part of our growing community! Join our Discord to stay updated~
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -200,11 +213,11 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pixel-btn bg-[#5865F2]"
-                style={{ 
-                  boxShadow: '4px 4px 0 #4752C4, inset -2px -2px 0 #4752C4, inset 2px 2px 0 #7289DA'
-                }}
+                // style={{ 
+                //   boxShadow: '4px 4px 0 #4752C4, inset -2px -2px 0 #4752C4, inset 2px 2px 0 #7289DA'
+                // }}
               >
-                💬 Join Discord
+                <Discord Join Discord
               </a>
               <Link href="/events" className="pixel-btn">
                 📅 See Events
