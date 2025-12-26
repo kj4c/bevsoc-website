@@ -32,7 +32,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-poppins text-2xl px-4 py-2 transition-all duration-200 rounded-lg
+                  className={`font-perandory text-5xl px-4 pt-2 transition-all duration-200 rounded-lg
                     ${isActive 
                       ? 'text-primary' 
                       : 'text-pink-light hover:text-white'
