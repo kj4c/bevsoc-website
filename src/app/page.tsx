@@ -2,18 +2,26 @@
 import Link from 'next/link';
 import Sparkles from '@/components/Sparkles';
 import Bubbles from '@/components/Bubbles';
-import LiquidEther from '@/components/LiquidEther';
 import RotatingText from '@/components/RotatingText';
-import { motion, LayoutGroup } from 'motion/react';
+import { motion, LayoutGroup, AnimatePresence } from 'motion/react';
+import { useState, useEffect } from 'react';
+import LiquidEther from '@/components/LiquidEther';
+
+const backgroundImages = [
+  '/water.jpg',
+  '/wine.jpg',
+  '/matcha.jpg',
+  '/iced_coffee.jpg',
+  '/beer.jpg'
+];
 
 export default function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   return (
     <div className="relative min-h-screen">
       <div 
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-        // style={{ 
-        //   backgroundImage: 'url(/matcha.jpg)',
-        // }}
       >
         <LiquidEther
           colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
@@ -35,25 +43,23 @@ export default function Home() {
       </div>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-   
-        
         {/* Content */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-center">
-          <div className="logo-container mb-6 text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-            <div className="top-row relative inline-block">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
+          <div className="logo-container" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+            <div className="top-row relative inline-block text-accent-light">
               <span className="script-b" style={{ fontFamily: 'var(--font-amoresa), cursive' }}>B</span>
               <span className="serif-rest" style={{ fontFamily: 'var(--font-perandory), serif' }}>EVERAGE</span>
               <span className="unsw-tag" style={{ fontFamily: 'var(--font-poppins), sans-serif' }}>unsw</span>
             </div>
-            <div className="bottom-row" style={{ fontFamily: 'var(--font-poppins), sans-serif bold' }}>
+            <div className="bottom-row text-accent-light" style={{ fontFamily: 'var(--font-poppins), sans-serif bold' }}>
               SOCIETY
             </div>
           </div>
           
           <LayoutGroup>
-            <motion.p className="flex items-center justify-center gap-5" layout>
+            <motion.p className="flex items-center justify-center gap-5 text-white text-shadow-lg" layout>
               <motion.span
-                className="text-accent font-perandory text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                className="font-perandory text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                 layout
                 transition={{ type: 'spring', damping: 30, stiffness: 400 }}
               >
@@ -61,7 +67,7 @@ export default function Home() {
               </motion.span>
               <RotatingText
                 texts={['Warmth', 'matcha', 'tea', 'coffee', 'comfort', 'smiles', 'stories', 'sips', 'pints', 'culture', 'breaks']}
-                mainClassName="text-accent overflow-hidden font-perandory text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                mainClassName="text-white text-shadow-lg  overflow-hidden font-perandory text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                 staggerFrom={'last'}
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}
@@ -73,6 +79,16 @@ export default function Home() {
               />
             </motion.p>
           </LayoutGroup>
+          
+          {/* Scroll Indicator */}
+          {/* <motion.div
+            className="mt-12 flex flex-col items-center gap-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.6 }}
+          >
+            <div className="w-px h-24 bg-accent opacity-60"></div>
+          </motion.div> */}
           
           {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
@@ -97,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 relative">
+      <section className="py-24 relative bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-bubbly-title text-xl sm:text-2xl text-accent mb-4">
