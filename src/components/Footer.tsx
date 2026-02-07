@@ -9,10 +9,10 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="pixel-window p-2 bg-[var(--primary)] border-2 border-[var(--accent-dark)]" style={{ boxShadow: 'none' }}>
-                <span className="font-bubbly-title text-[var(--accent)] text-sm">BEV<br/>SOC</span>
+                <span className="font-poppins text-[var(--accent)] text-sm">BEV<br/>SOC</span>
               </div>
             </Link>
-            <p className="text-[var(--pink-light)] font-pixel text-lg max-w-md">
+            <p className="text-[var(--pink-light)] font-poppins text-lg max-w-md">
               The cutest beverage appreciation society! Join us for tastings, events, 
               and good vibes~ 🍹✨
             </p>
@@ -20,13 +20,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[var(--primary)] font-bubbly-title text-xl mb-4">Quick Links</h3>
+            <h3 className="text-[var(--primary)] font-poppins text-xl mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {['Home', 'About Us', 'Sponsors', 'Events'].map((item) => (
                 <li key={item}>
                   <Link
                     href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-').replace('about-us', 'about')}`}
-                    className="text-[var(--pink-light)] hover:text-white transition-colors font-pixel text-lg"
+                    className="text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-lg"
                   >
                     → {item}
                   </Link>
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="text-[var(--primary)] font-bubbly-title text-xl mb-4">Connect</h3>
+            <h3 className="text-[var(--primary)] font-poppins text-xl mb-4">Connect</h3>
             <div className="flex gap-3">
               <a
                 href="https://discord.gg/bevsoc"
@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t-4 border-[var(--accent-dark)] text-center">
-          <p className="text-[var(--pink)] font-pixel text-lg">
+          <p className="text-[var(--pink)] font-poppins text-lg">
             © {new Date().getFullYear()} BevSoc ✨ Made with 💕
           </p>
         </div>
