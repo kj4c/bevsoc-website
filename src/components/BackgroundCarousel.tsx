@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 
 const backgroundImages = [
   '/water.jpg',
-  '/wine.jpg',
+  '/wine.png',
   '/matcha.jpg',
-  '/iced_coffee.jpg',
-  '/beer.jpg'
+  '/coffee.png',
+  '/beer.png'
 ];
 
 export default function BackgroundCarousel() {

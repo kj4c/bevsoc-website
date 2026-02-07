@@ -7,14 +7,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="pixel-window p-2 bg-[var(--primary)] border-2 border-[var(--accent-dark)]" style={{ boxShadow: 'none' }}>
-                <span className="font-poppins text-[var(--accent)] text-sm">BEV<br/>SOC</span>
-              </div>
+            <Link href="/" className="inline-flex shrink-0 items-center justify-center w-14 h-14 rounded-full overflow-hidden bg-primary p-2 mb-4">
+              <img src="/bevsoc_brown.png" alt="BevSoc" className="w-full h-full object-contain" />
             </Link>
-            <p className="text-[var(--pink-light)] font-poppins text-lg max-w-md">
+            <p className="text-pink-light font-poppins text-lg max-w-md">
               The cutest beverage appreciation society! Join us for tastings, events, 
-              and good vibes~ 🍹✨
+              and good vibes
             </p>
           </div>
 
@@ -76,7 +74,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t-4 border-[var(--accent-dark)] text-center">
           <p className="text-[var(--pink)] font-poppins text-lg">
-            © {new Date().getFullYear()} BevSoc ✨ Made with 💕
+            © {new Date().getFullYear()} BevSoc
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="flex items-center h-16">
           {/* Logo - Far Left */}
           <Link href="/" className="flex items-center gap-3 group shrink-0 bg-primary p-2 rounded-full">
-            <img src="/bevsoclogo_maroon.png" alt="BevSoc" className="w-10 h-10 object-cover" />
+            <img src="/bevsoc_brown.png" alt="BevSoc" className="w-10 h-10 object-contain" />
           </Link>
 
           {/* Desktop Navigation - Centered */}

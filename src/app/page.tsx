@@ -9,17 +9,7 @@ import LiquidEther from '@/components/LiquidEther';
 import BackgroundCarousel from '@/components/BackgroundCarousel';
 import { CalendarFold, UsersRound, Wine } from 'lucide-react';
 
-const backgroundImages = [
-  '/water.jpg',
-  '/wine.jpg',
-  '/matcha.jpg',
-  '/iced_coffee.jpg',
-  '/beer.jpg'
-];
-
 export default function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   return (
     <div className="relative min-h-screen">
       {/* Hero Section */}
@@ -205,7 +195,7 @@ export default function Home() {
               Ready to Join?
             </h2>
             <p className="font-poppins text-xl text-foreground mb-8">
-              Become part of our growing community! Join our Discord to stay updated~
+              Become part of our growing community! Join our Discord to stay updated
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
