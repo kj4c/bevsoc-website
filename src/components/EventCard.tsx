@@ -43,7 +43,7 @@ export default function EventCard({
 
   return (
     <div
-      className={`p-6 hover:-translate-y-1 transition-transform duration-200 rounded-lg ${
+      className={`p-4 sm:p-6 hover:-translate-y-1 transition-transform duration-200 rounded-lg ${
         isMaroon
           ? 'bg-accent border-2 border-primary text-primary'
           : 'pixel-window border-l-4 border-accent'
@@ -62,7 +62,7 @@ export default function EventCard({
 
       {/* Title */}
       <h3
-        className={`font-perandory text-2xl mb-3 leading-relaxed ${
+        className={`font-perandory text-xl sm:text-2xl mb-3 leading-relaxed ${
           isMaroon ? 'text-primary' : 'text-accent'
         }`}
       >
@@ -73,7 +73,7 @@ export default function EventCard({
       <div className="flex items-center gap-2 mb-2">
         <span className="text-lg">📅</span>
         <span
-          className={`font-poppins text-lg ${
+          className={`font-poppins text-base sm:text-lg ${
             isMaroon ? 'text-primary' : 'text-accent-dark'
           }`}
         >
@@ -85,7 +85,7 @@ export default function EventCard({
       <div className="flex items-center gap-2 mb-4">
         <span className="text-lg">📍</span>
         <span
-          className={`font-poppins text-lg ${
+          className={`font-poppins text-base sm:text-lg ${
             isMaroon ? 'text-primary' : 'text-accent-dark'
           }`}
         >
@@ -95,7 +95,7 @@ export default function EventCard({
 
       {/* Description */}
       <p
-        className={`font-poppins text-base leading-relaxed ${
+        className={`font-poppins text-sm sm:text-base leading-relaxed ${
           isMaroon ? 'text-primary' : 'text-accent-dark'
         }`}
       >

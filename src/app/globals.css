@@ -143,11 +143,10 @@ body {
   font-size: 3.3rem;
   font-weight: 700;
   position: absolute;
-  top: -10px;
   right: 0;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments - larger breakpoint first so smaller overrides */
 @media (max-width: 768px) {
   .script-b {
     font-size: 6.5rem;
@@ -163,7 +162,32 @@ body {
   }
   .unsw-tag {
     font-size: 1rem;
-    top: -2px;
+    top: -20px;
+    right: auto;
+    left: 58%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .script-b {
+    font-size: 4rem;
+    top: 3px;
+    margin-right: -6px;
+  }
+  .serif-rest {
+    font-size: 2.5rem;
+  }
+  .bottom-row {
+    font-size: 1.25rem;
+    margin-left: 3px;
+  }
+  .unsw-tag {
+    font-size: 0.75rem;
+    top: -15px;
+    right: auto;
+    left: 90%;
+    margin-left: 0;
   }
 }
 
@@ -248,6 +272,16 @@ section.snap-none {
   scroll-snap-stop: normal;
   height: auto;
   min-height: auto;
+  overflow: visible;
+}
+
+/* Section that snaps into view but flows with content (no internal scrollbar) */
+section.snap-start-flow {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  height: auto;
+  min-height: auto;
+  overflow: visible;
 }
 
 /* Pixel-style scrollbar */

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -14,6 +14,10 @@ const navLinks = [
 export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[9999] bg-accent navbar-blurred-bottom">
@@ -32,10 +36,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-perandory text-5xl px-4 pt-2 transition-all duration-200 rounded-lg
+                  className={`font-perandory text-2xl lg:text-4xl xl:text-5xl px-2 lg:px-4 pt-2 transition-all duration-200 rounded-lg
                     ${isActive 
                       ? 'text-primary' 
-                      : 'text-pink-light hover:text-white'
+                      : 'text-white/90 hover:text-white'
                     }`}
                 >
                   {link.label}
@@ -47,7 +51,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-accent hover:text-accent-dark transition-colors"
+            className="md:hidden p-2 text-primary hover:text-white transition-colors"
             aria-label="Toggle menu"
           >
             <svg
@@ -78,15 +82,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`md:hidden transition-all duration-150 ease-out overflow-hidden ${
           isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-4 py-3 space-y-1" style={{ 
-          background: 'rgba(94, 38, 48, 0.15)', 
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)'
-        }}>
+        <div className="px-4 py-3 space-y-1 bg-accent-dark/95">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -94,10 +94,10 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-4 py-3 font-poppins text-2xl transition-all duration-200 rounded-lg
+                className={`block px-4 py-3 font-poppins text-lg sm:text-xl transition-all duration-200 rounded-lg
                   ${isActive 
-                    ? 'text-accent font-semibold bg-white bg-opacity-20' 
-                    : 'text-accent hover:text-accent-dark hover:bg-white hover:bg-opacity-10'
+                    ? 'text-primary font-semibold bg-primary/30' 
+                    : 'text-primary hover:text-white hover:bg-accent-light/20'
                   }`}
               >
                 {link.label}

@@ -10,7 +10,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex shrink-0 items-center justify-center w-14 h-14 rounded-full overflow-hidden bg-primary p-2 mb-4">
               <img src="/bevsoc_brown.png" alt="BevSoc" className="w-full h-full object-contain" />
             </Link>
-            <p className="text-pink-light font-poppins text-lg max-w-md">
+            <p className="text-pink-light font-poppins text-base sm:text-lg max-w-md">
               The first beverage appreciation society! Join us for tastings, events, 
               and good vibes
             </p>
@@ -18,13 +18,13 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[var(--primary)] font-poppins text-xl mb-4">Quick Links</h3>
+            <h3 className="text-[var(--primary)] font-poppins text-lg sm:text-xl mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {['Home', 'About Us', 'Sponsors', 'Events'].map((item) => (
                 <li key={item}>
                   <Link
                     href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-').replace('about-us', 'about')}`}
-                    className="text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-lg"
+                    className="text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-base sm:text-lg"
                   >
                     → {item}
                   </Link>
@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="text-[var(--primary)] font-poppins text-xl mb-4">Connect</h3>
+            <h3 className="text-[var(--primary)] font-poppins text-lg sm:text-xl mb-4">Connect</h3>
             <div className="flex gap-3">
               <a
                 href="https://discord.gg/bevsoc"
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t-4 border-[var(--accent-dark)] text-center">
-          <p className="text-[var(--pink)] font-poppins text-lg">
+          <p className="text-[var(--pink)] font-poppins text-sm sm:text-lg">
             © {new Date().getFullYear()} BevSoc
           </p>
         </div>

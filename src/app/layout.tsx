@@ -74,6 +74,12 @@ export const metadata: Metadata = {
   description: "Join BevSoc - the premier beverage appreciation society. Discover events, meet fellow enthusiasts, and explore the art of drinks.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

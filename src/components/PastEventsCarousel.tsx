@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TiltedCard from './TiltedCard';
 
 interface PastEvent {
@@ -21,18 +21,28 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
 
   if (events.length === 0) return null;
 
-  const itemsPerPage = 3;
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  useEffect(() => {
+    const update = () => setItemsPerPage(window.innerWidth < 640 ? 1 : (window.innerWidth < 1024 ? 2 : 3));
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
   const maxIndex = Math.max(0, events.length - itemsPerPage);
-  const visibleEvents = events.slice(currentIndex, currentIndex + itemsPerPage);
+  const safeIndex = Math.min(currentIndex, maxIndex);
+  const visibleEvents = events.slice(safeIndex, safeIndex + itemsPerPage);
 
   const goPrev = () => setCurrentIndex((i) => Math.max(0, i - 1));
   const goNext = () => setCurrentIndex((i) => Math.min(maxIndex, i + 1));
+  useEffect(() => {
+    if (currentIndex > maxIndex && maxIndex >= 0) setCurrentIndex(maxIndex);
+  }, [currentIndex, maxIndex]);
 
   return (
-    <div className="w-full h-full min-h-[400px] px-8 sm:px-12 flex flex-col">
+    <div className="w-full h-full min-h-[280px] sm:min-h-[350px] lg:min-h-[400px] px-4 sm:px-8 lg:px-12 flex flex-col">
       <div className="relative flex items-center justify-center gap-6 sm:gap-8 flex-1 min-h-0">
         {/* Prev button */}
-        {events.length > itemsPerPage && (
+        {events.length > itemsPerPage && itemsPerPage > 0 && (
           <button
             onClick={goPrev}
             disabled={currentIndex === 0}
@@ -53,7 +63,7 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
             return (
               <div
                 key={event.id}
-                className="flex-1 min-w-0 max-w-[220px] sm:max-w-[280px] aspect-[2/3] overflow-hidden rounded-2xl shadow-lg"
+                className="flex-1 min-w-0 max-w-[180px] sm:max-w-[220px] lg:max-w-[280px] aspect-[2/3] overflow-hidden rounded-2xl shadow-lg"
               >
                 <TiltedCard
                   imageSrc={imageSrc}
@@ -72,14 +82,14 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
                   overlayContent={
                     <div className="w-full h-full flex flex-col justify-end">
                       <div
-                        className={`p-5 ${
+                        className={`p-3 sm:p-4 lg:p-5 ${
                           i % 2 === 0 ? 'bg-[var(--primary)]/95 text-accent' : 'bg-[var(--accent)]/90 text-primary'
                         }`}
                       >
-                        <h3 className="font-perandory text-2xl sm:text-3xl font-semibold">
+                        <h3 className="font-perandory text-lg sm:text-2xl lg:text-3xl font-semibold">
                           {event.title}
                         </h3>
-                        <p className="font-poppins text-base sm:text-lg">
+                        <p className="font-poppins text-sm sm:text-base lg:text-lg">
                           {new Date(event.date).toLocaleDateString()}
                         </p>
                       </div>
@@ -92,7 +102,7 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
         </div>
 
         {/* Next button */}
-        {events.length > itemsPerPage && (
+        {events.length > itemsPerPage && itemsPerPage > 0 && (
           <button
             onClick={goNext}
             disabled={currentIndex >= maxIndex}
@@ -107,7 +117,7 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
       </div>
 
       {/* Dots indicator */}
-      {events.length > itemsPerPage && (
+      {events.length > itemsPerPage && itemsPerPage > 0 && (
         <div className="flex justify-center gap-2 mt-4 shrink-0">
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button

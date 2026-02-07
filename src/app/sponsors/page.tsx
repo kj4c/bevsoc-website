@@ -18,19 +18,19 @@ export default function SponsorsPage() {
   return (
     <div className="relative min-h-screen no-snap">
       {/* Hero */}
-      <section className="py-16 pt-24 relative overflow-hidden bg-accent">
+      <section className="py-12 sm:py-16 pt-[calc(6rem+4rem)] relative overflow-hidden bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-perandory text-8xl sm:text-8xl text-primary mb-4">
+          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary mb-4">
             Our Sponsors
           </h1>
-          <p className="font-poppins text-4xl text-primary">
+          <p className="font-poppins text-xl sm:text-3xl lg:text-4xl text-primary px-2">
             Thank you to everyone who supports us!
           </p>
         </div>
       </section>
 
       {/* Sponsors */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-10 sm:py-16 relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <LiquidEther
             colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
@@ -63,7 +63,7 @@ export default function SponsorsPage() {
                     {sponsor.name.charAt(0)}
                   </span>
                 </div>
-                <h3 className="font-perandory text-2xl text-accent">
+                <h3 className="font-perandory text-xl sm:text-2xl text-accent">
                   {sponsor.name}
                 </h3>
               </div>
@@ -71,10 +71,10 @@ export default function SponsorsPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <h2 className="font-perandory text-6xl sm:text-7xl text-accent mb-4">
+            <h2 className="font-perandory text-3xl sm:text-5xl lg:text-7xl text-accent mb-4">
               Want to Sponsor Us?
             </h2>
-            <p className="font-poppins text-xl text-accent-dark mb-6">
+            <p className="font-poppins text-base sm:text-xl text-accent-dark mb-6">
               Partner with BevSoc and reach our community!
             </p>
             <a href="mailto:sponsors@bevsoc.com" className="pixel-btn">

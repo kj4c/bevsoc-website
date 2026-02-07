@@ -56,7 +56,7 @@ export default function EventsPage() {
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <h1 className="font-perandory text-8xl sm:text-8xl text-accent mb-6 text-center">
+          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent mb-4 sm:mb-6 text-center">
             Upcoming Events
           </h1>
 
@@ -77,7 +77,7 @@ export default function EventsPage() {
             </div>
           ) : (
             <div className="pixel-window p-8 text-center max-w-md mx-auto">
-              <p className="font-poppins text-xl text-accent">
+              <p className="font-poppins text-base sm:text-xl text-accent">
                 No upcoming events right now. Check back soon!
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function EventsPage() {
       {pastEvents.length > 0 && (
         <section className="py-6 relative bg-accent flex flex-col items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 min-h-0 flex flex-col">
-            <h2 className="font-perandory text-8xl sm:text-8xl text-primary mb-4 text-center shrink-0">
+            <h2 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary mb-4 text-center shrink-0">
               Past Events
             </h2>
 
@@ -101,19 +101,19 @@ export default function EventsPage() {
       )}
 
       {/* CTA */}
-      <section className="snap-none py-20 relative bg-[var(--accent)] border-[var(--accent-dark)] flex flex-col items-center justify-center">
+      <section className="snap-none py-12 sm:py-16 lg:py-20 relative bg-[var(--accent)] border-[var(--accent-dark)] flex flex-col items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
-          <h2 className="text-[var(--primary)] font-perandory text-8xl sm:text-8xl mb-4">
+          <h2 className="text-[var(--primary)] font-perandory text-4xl sm:text-6xl lg:text-8xl mb-4">
             Never Miss an Event
           </h2>
-          <p className="text-[var(--pink-light)] font-poppins text-lg mb-4">
+          <p className="text-[var(--pink-light)] font-poppins text-base sm:text-lg mb-4">
             Join our Discord to get notified about new events.
           </p>
           <a
             href="https://discord.gg/bevsoc"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-lg"
+            className="text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-base sm:text-lg"
           >
             → Join Discord
           </a>
