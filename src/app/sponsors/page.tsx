@@ -18,9 +18,9 @@ export default function SponsorsPage() {
   return (
     <div className="relative min-h-screen no-snap">
       {/* Hero */}
-      <section className="py-12 sm:py-16 pt-[calc(6rem+4rem)] relative overflow-hidden bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary mb-4">
+      <section className="py-12 sm:py-16 pt-[calc(6rem+5rem)] sm:pt-[calc(6rem+4rem)] relative overflow-visible bg-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-4 sm:pt-0">
+          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary mb-4 leading-tight">
             Our Sponsors
           </h1>
           <p className="font-poppins text-xl sm:text-3xl lg:text-4xl text-primary px-2">

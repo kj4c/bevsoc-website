@@ -32,9 +32,9 @@ export default function EventsPage() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // most recent first
 
   return (
-    <div className="relative min-h-screen">
-      {/* Events */}
-      <section className="py-8 pt-[calc(6rem+4rem)] relative flex flex-col items-center overflow-hidden">
+    <div className="relative min-h-screen no-snap">
+      {/* Upcoming Events Section */}
+      <section className="py-12 sm:py-16 pt-[calc(6rem+5rem)] sm:pt-[calc(6rem+4rem)] relative flex flex-col items-center overflow-visible">
         <div className="absolute inset-0 -z-10">
           <LiquidEther
             colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
@@ -55,13 +55,13 @@ export default function EventsPage() {
             className="absolute inset-0 w-full h-full"
           />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent mb-4 sm:mb-6 text-center">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full relative z-10 pt-4 sm:pt-0">
+          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent mb-3 sm:mb-6 text-center leading-tight">
             Upcoming Events
           </h1>
 
           {upcomingEvents.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {upcomingEvents.map((event, i) => (
                 <EventCard
                   key={event.id}
@@ -85,15 +85,15 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* Past Events */}
+      {/* Past Events Section */}
       {pastEvents.length > 0 && (
-        <section className="py-6 relative bg-accent flex flex-col items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 min-h-0 flex flex-col">
-            <h2 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary mb-4 text-center shrink-0">
+        <section className="pt-6 pb-4 sm:py-6 relative bg-accent flex flex-col items-center justify-center overflow-visible py-8 sm:py-12">
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center gap-4 sm:gap-2">
+            <h2 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary text-center leading-tight shrink-0">
               Past Events
             </h2>
 
-            <div className="flex-1 min-h-0 flex items-stretch justify-center w-full">
+            <div className="flex justify-center w-full flex-1 min-h-0 items-center">
               <PastEventsCarousel events={pastEvents} />
             </div>
           </div>

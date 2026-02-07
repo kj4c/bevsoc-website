@@ -149,19 +149,19 @@ body {
 /* Responsive adjustments - larger breakpoint first so smaller overrides */
 @media (max-width: 768px) {
   .script-b {
-    font-size: 6.5rem;
+    font-size: 9.75rem; /* 6.5 * 1.5 */
     top: 5px;
     margin-right: -10px;
   }
   .serif-rest {
-    font-size: 4rem;
+    font-size: 6rem; /* 4 * 1.5 */
   }
   .bottom-row {
-    font-size: 2rem;
+    font-size: 3rem; /* 2 * 1.5 */
     margin-left: 5px;
   }
   .unsw-tag {
-    font-size: 1rem;
+    font-size: 1.5rem; /* 1 * 1.5 */
     top: -20px;
     right: auto;
     left: 58%;
@@ -171,19 +171,19 @@ body {
 
 @media (max-width: 480px) {
   .script-b {
-    font-size: 4rem;
+    font-size: 6rem; /* 4 * 1.5 */
     top: 3px;
     margin-right: -6px;
   }
   .serif-rest {
-    font-size: 2.5rem;
+    font-size: 3.75rem; /* 2.5 * 1.5 */
   }
   .bottom-row {
-    font-size: 1.25rem;
+    font-size: 1.875rem; /* 1.25 * 1.5 */
     margin-left: 3px;
   }
   .unsw-tag {
-    font-size: 0.75rem;
+    font-size: 1.125rem; /* 0.75 * 1.5 */
     top: -15px;
     right: auto;
     left: 90%;
@@ -264,6 +264,7 @@ html.no-snap-page {
   scroll-snap-stop: normal;
   height: auto;
   min-height: auto;
+  overflow: visible;
 }
 
 /* Single section without snap (e.g. CTA at bottom) */

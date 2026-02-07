@@ -1,52 +1,22 @@
 [
   {
     "id": "1",
-    "title": "Welcome Back BBQ",
-    "date": "2025-02-15",
-    "time": "5:00 PM",
-    "location": "Campus Lawn",
-    "description": "Kick off the semester with drinks and BBQ! Meet new members and catch up with friends~",
-    "image": "/temp_build_boba.png",
-    "category": "social"
-  },
-  {
-    "id": "2",
-    "title": "Coffee Tasting Workshop",
-    "date": "2025-02-22",
-    "time": "2:00 PM",
-    "location": "Student Center Room 101",
-    "description": "Learn about different coffee origins and brewing methods with our expert barista!",
-    "image": "/temp_build_boba.png",
+    "title": "Build a Boba",
+    "date": "2025-11-05",
+    "time": "TBD",
+    "location": "TBD",
+    "description": "Join us for a fun afternoon of building your own boba drinks!",
+    "image": "/build_a_boba_banner.png",
     "category": "workshop"
   },
   {
-    "id": "3",
-    "title": "Wine & Cheese Night",
-    "date": "2025-03-08",
-    "time": "7:00 PM",
-    "location": "Faculty Club",
-    "description": "An elegant evening of wine tasting paired with artisanal cheeses. 21+ only!",
-    "image": "/temp_build_boba.png",
-    "category": "tasting"
-  },
-  {
-    "id": "4",
-    "title": "Boba Crawl",
-    "date": "2025-03-15",
-    "time": "1:00 PM",
-    "location": "Meet at Main Gate",
-    "description": "Join us as we explore the best bubble tea spots around campus! 🧋",
-    "image": "/temp_build_boba.png",
+    "id": "2",
+    "title": "Hallo-wasted",
+    "date": "2025-10-31",
+    "time": "TBD",
+    "location": "TBD",
+    "description": "Spooky drinks and good vibes for Halloween!",
+    "image": "/hallowasted_banner.png",
     "category": "social"
-  },
-  {
-    "id": "1766570523134",
-    "title": "diddy",
-    "date": "2025-12-07",
-    "time": "2222",
-    "location": "dadw",
-    "description": "2ee",
-    "image": "/temp_build_boba.png",
-    "category": "other"
   }
 ]

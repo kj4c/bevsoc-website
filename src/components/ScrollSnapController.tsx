@@ -14,7 +14,7 @@ export default function ScrollSnapController() {
 
   useEffect(() => {
     const html = document.documentElement;
-    if (pathname === '/sponsors') {
+    if (pathname === '/sponsors' || pathname === '/events') {
       html.classList.add('no-snap-page');
     } else {
       html.classList.remove('no-snap-page');

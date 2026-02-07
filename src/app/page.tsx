@@ -49,9 +49,9 @@ export default function Home() {
           </div>
           
           <LayoutGroup>
-            <motion.p className="flex items-center justify-center gap-5 text-white text-shadow-lg pt-6 sm:pt-0" layout>
+            <motion.p className="flex items-center justify-center gap-5 text-white text-shadow-lg pt-6 sm:pt-0 text-[3.375rem] sm:text-5xl md:text-6xl lg:text-7xl" layout>
               <motion.span
-                className="font-perandory text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+                className="font-perandory"
                 layout
                 transition={{ type: 'spring', damping: 30, stiffness: 400 }}
               >
@@ -59,7 +59,7 @@ export default function Home() {
               </motion.span>
               <RotatingText
                 texts={['Warmth', 'matcha', 'tea', 'coffee', 'comfort', 'smiles', 'stories', 'sips', 'pints', 'culture', 'breaks']}
-                mainClassName="text-white text-shadow-lg  overflow-hidden font-perandory text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+                mainClassName="text-white text-shadow-lg overflow-hidden font-perandory text-[3.375rem] sm:text-5xl md:text-6xl lg:text-7xl"
                 staggerFrom={'last'}
                 initial={{ y: '100%' }}
                 animate={{ y: 0 }}

@@ -39,7 +39,7 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
   }, [currentIndex, maxIndex]);
 
   return (
-    <div className="w-full h-full min-h-[280px] sm:min-h-[350px] lg:min-h-[400px] px-4 sm:px-8 lg:px-12 flex flex-col">
+    <div className="w-full min-h-[280px] sm:min-h-[350px] lg:min-h-[400px] px-2 sm:px-8 lg:px-12 flex flex-col">
       <div className="relative flex items-center justify-center gap-6 sm:gap-8 flex-1 min-h-0">
         {/* Prev button */}
         {events.length > itemsPerPage && itemsPerPage > 0 && (
@@ -63,7 +63,7 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
             return (
               <div
                 key={event.id}
-                className="flex-1 min-w-0 max-w-[180px] sm:max-w-[220px] lg:max-w-[280px] aspect-[2/3] overflow-hidden rounded-2xl shadow-lg"
+                className="flex-1 min-w-0 w-[85vw] max-w-[280px] sm:w-auto sm:max-w-[220px] lg:max-w-[280px] aspect-[2/3] overflow-hidden rounded-2xl shadow-lg"
               >
                 <TiltedCard
                   imageSrc={imageSrc}
