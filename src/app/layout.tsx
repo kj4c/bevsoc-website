@@ -4,6 +4,7 @@ import { Allura, Bodoni_Moda, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollSnapController from "@/components/ScrollSnapController";
 
 const superBubbly = localFont({
   src: "./fonts/SuperBubbly-G35nA.ttf",
@@ -81,6 +82,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${superBubbly.variable} ${stayPixel.variable} ${syne.variable} ${fredoka.variable} ${allura.variable} ${bodoniModa.variable} ${montserrat.variable} ${amoresa.variable} ${perandory.variable} ${poppins.variable} antialiased`}>
+        <ScrollSnapController />
         <Navbar />
         <main className="min-h-screen">
           {children}

@@ -1,153 +1,88 @@
-import Sparkles from '@/components/Sparkles';
+'use client';
+
+import LiquidEther from '@/components/LiquidEther';
 
 export default function SponsorsPage() {
-  const sponsors = {
-    gold: [
-      { name: 'Premium Beverages Co', tier: 'Gold' },
-      { name: 'Craft Coffee Roasters', tier: 'Gold' },
-    ],
-    silver: [
-      { name: 'Local Brewery', tier: 'Silver' },
-      { name: 'Tea House', tier: 'Silver' },
-      { name: 'Juice Bar', tier: 'Silver' },
-    ],
-    bronze: [
-      { name: 'Campus Cafe', tier: 'Bronze' },
-      { name: 'Snack Shop', tier: 'Bronze' },
-      { name: 'Bubble Tea Place', tier: 'Bronze' },
-      { name: 'Smoothie Stand', tier: 'Bronze' },
-    ],
-  };
+  const sponsors = [
+    { name: 'Premium Beverages Co' },
+    { name: 'Craft Coffee Roasters' },
+    { name: 'Local Brewery' },
+    { name: 'Tea House' },
+    { name: 'Juice Bar' },
+    { name: 'Campus Cafe' },
+    { name: 'Snack Shop' },
+    { name: 'Bubble Tea Place' },
+    { name: 'Smoothie Stand' },
+  ];
 
   return (
-    <div className="min-h-screen bg-[var(--primary)]">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-[var(--pink-light)] to-[var(--primary)]">
-        <Sparkles />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="pixel-window p-8">
-            <h1 className="font-bubbly-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
-              Our Sponsors
-            </h1>
-            <p className="font-pixel text-xl text-[var(--foreground)]">
-              💕 Thank you to everyone who supports us! 💕
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Gold Sponsors */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-bubbly-title text-lg text-[#FFD700] text-center mb-8 flex items-center justify-center gap-2">
-            ⭐ Gold Sponsors ⭐
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {sponsors.gold.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="pixel-window p-8 text-center bg-gradient-to-b from-[#FFF8E7] to-[var(--primary-light)]"
-                style={{
-                  borderColor: '#FFD700',
-                  boxShadow: '8px 8px 0 #B8860B, inset -4px -4px 0 #FFF8DC, inset 4px 4px 0 white',
-                }}
-              >
-                <div className="w-20 h-20 mx-auto mb-4 bg-[#FFD700] border-4 border-[#B8860B] flex items-center justify-center">
-                  <span className="font-bubbly-title text-2xl text-white">
-                    {sponsor.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="font-pixel text-xl text-[var(--foreground)]">
-                  {sponsor.name}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Silver Sponsors */}
-      <section className="py-16 bg-[var(--cream)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-bubbly-title text-lg text-[#C0C0C0] text-center mb-8 flex items-center justify-center gap-2">
-            ✦ Silver Sponsors ✦
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sponsors.silver.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="pixel-window p-6 text-center"
-                style={{
-                  borderColor: '#C0C0C0',
-                  boxShadow: '6px 6px 0 #808080, inset -3px -3px 0 #E8E8E8, inset 3px 3px 0 white',
-                }}
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-[#C0C0C0] border-4 border-[#808080] flex items-center justify-center">
-                  <span className="font-bubbly-title text-xl text-white">
-                    {sponsor.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="font-pixel text-lg text-[var(--foreground)]">
-                  {sponsor.name}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bronze Sponsors */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-bubbly-title text-lg text-[#CD7F32] text-center mb-8 flex items-center justify-center gap-2">
-            ♦ Bronze Sponsors ♦
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {sponsors.bronze.map((sponsor) => (
-              <div
-                key={sponsor.name}
-                className="pixel-window p-4 text-center"
-                style={{
-                  borderColor: '#CD7F32',
-                  boxShadow: '4px 4px 0 #8B4513, inset -2px -2px 0 #DEB887, inset 2px 2px 0 white',
-                }}
-              >
-                <div className="w-12 h-12 mx-auto mb-3 bg-[#CD7F32] border-3 border-[#8B4513] flex items-center justify-center">
-                  <span className="font-bubbly-title text-sm text-white">
-                    {sponsor.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="font-bubbly-title text-base text-[var(--foreground)]">
-                  {sponsor.name}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Become a Sponsor CTA */}
-      <section className="py-20 bg-[var(--accent)] relative overflow-hidden">
-        <Sparkles />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-bubbly-title text-lg text-[var(--primary)] mb-6">
-            Want to Sponsor Us? ✨
-          </h2>
-          <p className="font-pixel text-xl text-[var(--pink-light)] mb-8">
-            Partner with BevSoc and reach our amazing community!
+    <div className="relative min-h-screen no-snap">
+      {/* Hero */}
+      <section className="py-16 pt-24 relative overflow-hidden bg-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-perandory text-8xl sm:text-8xl text-primary mb-4">
+            Our Sponsors
+          </h1>
+          <p className="font-poppins text-4xl text-primary">
+            Thank you to everyone who supports us!
           </p>
-          <a
-            href="mailto:sponsors@bevsoc.com"
-            className="pixel-btn bg-[var(--primary)] text-[var(--accent)]"
-            style={{ 
-              boxShadow: '4px 4px 0 var(--cream), inset -2px -2px 0 var(--pink), inset 2px 2px 0 white'
-            }}
-          >
-            💌 Contact Us
-          </a>
+        </div>
+      </section>
+
+      {/* Sponsors */}
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <LiquidEther
+            colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sponsors.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="pixel-window p-6 hover:-translate-y-1 transition-transform duration-200 border-l-4 border-accent"
+              >
+                <div className="w-12 h-12 mb-3 rounded-full border-2 border-accent flex items-center justify-center text-accent">
+                  <span className="font-perandory text-xl">
+                    {sponsor.name.charAt(0)}
+                  </span>
+                </div>
+                <h3 className="font-perandory text-2xl text-accent">
+                  {sponsor.name}
+                </h3>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <h2 className="font-perandory text-6xl sm:text-7xl text-accent mb-4">
+              Want to Sponsor Us?
+            </h2>
+            <p className="font-poppins text-xl text-accent-dark mb-6">
+              Partner with BevSoc and reach our community!
+            </p>
+            <a href="mailto:sponsors@bevsoc.com" className="pixel-btn">
+              Contact Us
+            </a>
+          </div>
         </div>
       </section>
     </div>
   );
 }
-

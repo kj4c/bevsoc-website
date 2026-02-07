@@ -11,8 +11,12 @@ export default function AboutPage() {
     { image: '/bevz.jpg', text: 'Kayla Lee - VP Events' },
     { image: '/iced_coffee.jpg', text: 'Zachary Abran - VP IT' },
     { image: '/bevz.jpg', text: 'Anisa Brar - VP Human Resources' },
+    { image: '/bevz.jpg', text: 'Selina Yan - VP Sponsorships' },
     { image: '/matcha.jpg', text: 'Ethan Gu - Treasurer' },
     { image: '/matcha.jpg', text: 'Jenny Tang - Secretary' },
+    { image: '/matcha.jpg', text: 'Alex Lum - Arc Delegate' },
+    { image: '/matcha.jpg', text: 'Sean Wang - GEDI' },
+    { image: '/matcha.jpg', text: 'Olivia Oh - GEDI' },
   ];
 
   return (
@@ -97,11 +101,31 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-8 relative overflow-hidden bg-primary flex flex-col items-center justify-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center">
-          <div className="text-center mb-6">
+      <section className="py-8 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="absolute inset-0 -z-10">
+          <LiquidEther
+            colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center relative z-10">
+          <div className="text-center mb-2">
             <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-2">
-              Meet the Team
+              Meet the Execs
             </h2>
             <p className="font-poppins text-4xl text-accent">
               The people behind BevSoc
@@ -122,6 +146,26 @@ export default function AboutPage() {
 
       {/* Join CTA */}
       <section className="py-24 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="absolute inset-0 -z-10">
+          <LiquidEther
+            colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full flex-1 flex flex-col justify-center">
           <div className="pixel-window p-8">
             <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-6">

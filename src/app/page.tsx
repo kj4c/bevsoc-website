@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[calc(6rem+4rem)] pb-24">
         {/* Background Image Carousel - Only in Hero Section */}
         <div className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat">
           <BackgroundCarousel />
@@ -92,11 +92,13 @@ export default function Home() {
                 icon: <UsersRound />,
                 title: 'Community',
                 description: 'Meet fellow beverage enthusiasts who love good drinks and great company!',
+                image: '/matcha.jpg',
               },
               {
                 icon: <Wine/>,
                 title: 'Events',
                 description: 'Exclusive tastings, workshops, and social gatherings throughout the year!',
+                image: '/wine.jpg',
               },
             ].map((feature) => (
               <div
@@ -107,9 +109,16 @@ export default function Home() {
                 <h3 className="font-perandory text-4xl text-accent mb-3 underline underline-1" >
                   {feature.title}
                 </h3>
-                <p className="font-poppins text-2xl text-accent-light">
+                <p className="font-poppins text-2xl text-accent-light mb-4">
                   {feature.description}
                 </p>
+                <div className="w-full h-60 rounded-lg overflow-hidden bg-cream mt-auto">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             ))}
           </div>

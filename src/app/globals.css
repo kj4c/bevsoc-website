@@ -211,11 +211,13 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scroll-padding-top: 64px; /* navbar height */
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
 }
 
 main section {
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
   height: 100vh;
   min-height: 100vh;
   overflow-y: auto;
@@ -226,6 +228,26 @@ main section {
 
 footer {
   scroll-snap-align: start;
+}
+
+/* Disable scroll snap on sponsors page (set via ScrollSnapController) */
+html.no-snap-page {
+  scroll-snap-type: none;
+}
+
+.no-snap section {
+  scroll-snap-align: none;
+  scroll-snap-stop: normal;
+  height: auto;
+  min-height: auto;
+}
+
+/* Single section without snap (e.g. CTA at bottom) */
+section.snap-none {
+  scroll-snap-align: none;
+  scroll-snap-stop: normal;
+  height: auto;
+  min-height: auto;
 }
 
 /* Pixel-style scrollbar */

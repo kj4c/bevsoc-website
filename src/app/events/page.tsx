@@ -1,5 +1,8 @@
-import Sparkles from '@/components/Sparkles';
+'use client';
+
 import EventCard from '@/components/EventCard';
+import PastEventsCarousel from '@/components/PastEventsCarousel';
+import LiquidEther from '@/components/LiquidEther';
 import eventsData from '@/data/events.json';
 
 interface Event {
@@ -15,44 +18,51 @@ interface Event {
 
 export default function EventsPage() {
   const events: Event[] = eventsData;
-  
+
   // Sort events by date
   const sortedEvents = [...events].sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
   );
-  
+
   // Separate upcoming and past events
   const now = new Date();
   const upcomingEvents = sortedEvents.filter((e) => new Date(e.date) >= now);
-  const pastEvents = sortedEvents.filter((e) => new Date(e.date) < now);
+  const pastEvents = [...sortedEvents]
+    .filter((e) => new Date(e.date) < now)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // most recent first
 
   return (
-    <div className="min-h-screen bg-[var(--primary)]">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-[var(--pink-light)] to-[var(--primary)]">
-        <Sparkles />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="pixel-window p-8">
-            <h1 className="font-bubbly-title text-2xl sm:text-3xl text-[var(--accent)] mb-4">
-              Events
-            </h1>
-            <p className="font-pixel text-xl text-[var(--foreground)]">
-              🎉 Check out what's happening! 🎉
-            </p>
-          </div>
+    <div className="relative min-h-screen">
+      {/* Events */}
+      <section className="py-8 pt-[calc(6rem+4rem)] relative flex flex-col items-center overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <LiquidEther
+            colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+            className="absolute inset-0 w-full h-full"
+          />
         </div>
-      </section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <h1 className="font-perandory text-8xl sm:text-8xl text-accent mb-6 text-center">
+            Upcoming Events
+          </h1>
 
-      {/* Upcoming Events */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-bubbly-title text-lg text-[var(--accent)] text-center mb-8">
-            ✨ Upcoming Events ✨
-          </h2>
-          
           {upcomingEvents.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {upcomingEvents.map((event) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {upcomingEvents.map((event, i) => (
                 <EventCard
                   key={event.id}
                   title={event.title}
@@ -61,13 +71,14 @@ export default function EventsPage() {
                   location={event.location}
                   description={event.description}
                   category={event.category}
+                  variant={i % 2 === 0 ? 'beige' : 'maroon'}
                 />
               ))}
             </div>
           ) : (
             <div className="pixel-window p-8 text-center max-w-md mx-auto">
-              <p className="font-pixel text-xl text-[var(--foreground)]">
-                No upcoming events right now~ Check back soon! 💕
+              <p className="font-poppins text-xl text-accent">
+                No upcoming events right now. Check back soon!
               </p>
             </div>
           )}
@@ -76,48 +87,35 @@ export default function EventsPage() {
 
       {/* Past Events */}
       {pastEvents.length > 0 && (
-        <section className="py-16 bg-[var(--cream)]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-bubbly-title text-lg text-[var(--accent)] text-center mb-8">
-              📸 Past Events
+        <section className="py-6 relative bg-accent flex flex-col items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 min-h-0 flex flex-col">
+            <h2 className="font-perandory text-8xl sm:text-8xl text-primary mb-4 text-center shrink-0">
+              Past Events
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {pastEvents.map((event) => (
-                <div key={event.id} className="pixel-window p-4 opacity-75">
-                  <h3 className="font-pixel text-lg text-[var(--accent)] mb-2">
-                    {event.title}
-                  </h3>
-                  <p className="font-pixel text-sm text-[var(--foreground)]">
-                    {new Date(event.date).toLocaleDateString()}
-                  </p>
-                </div>
-              ))}
+
+            <div className="flex-1 min-h-0 flex items-stretch justify-center w-full">
+              <PastEventsCarousel events={pastEvents} />
             </div>
           </div>
         </section>
       )}
 
-      {/* Subscribe CTA */}
-      <section className="py-20 bg-[var(--accent)] relative overflow-hidden">
-        <Sparkles />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-bubbly-title text-lg text-[var(--primary)] mb-6">
-            Never Miss an Event! 📅
+      {/* CTA */}
+      <section className="snap-none py-20 relative bg-[var(--accent)] border-[var(--accent-dark)] flex flex-col items-center justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+          <h2 className="text-[var(--primary)] font-perandory text-8xl sm:text-8xl mb-4">
+            Never Miss an Event
           </h2>
-          <p className="font-pixel text-xl text-[var(--pink-light)] mb-8">
-            Join our Discord to get notified about new events~
+          <p className="text-[var(--pink-light)] font-poppins text-lg mb-4">
+            Join our Discord to get notified about new events.
           </p>
           <a
             href="https://discord.gg/bevsoc"
             target="_blank"
             rel="noopener noreferrer"
-            className="pixel-btn bg-[#5865F2]"
-            style={{ 
-              boxShadow: '4px 4px 0 #4752C4, inset -2px -2px 0 #4752C4, inset 2px 2px 0 #7289DA'
-            }}
+            className="text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-lg"
           >
-            💬 Join Discord
+            → Join Discord
           </a>
         </div>
       </section>

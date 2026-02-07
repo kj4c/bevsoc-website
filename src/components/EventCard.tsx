@@ -5,6 +5,7 @@ interface EventCardProps {
   location: string;
   description: string;
   category: string;
+  variant?: 'beige' | 'maroon';
 }
 
 const categoryEmojis: Record<string, string> = {
@@ -28,7 +29,9 @@ export default function EventCard({
   location,
   description,
   category,
+  variant = 'beige',
 }: EventCardProps) {
+  const isMaroon = variant === 'maroon';
   const formatDate = (dateStr: string) => {
     const d = new Date(dateStr);
     return d.toLocaleDateString('en-US', {
@@ -39,27 +42,41 @@ export default function EventCard({
   };
 
   return (
-    <div className="pixel-window p-6 hover:translate-y-[-4px] transition-transform duration-200">
+    <div
+      className={`p-6 hover:-translate-y-1 transition-transform duration-200 rounded-lg ${
+        isMaroon
+          ? 'bg-accent border-2 border-primary text-primary'
+          : 'pixel-window border-l-4 border-accent'
+      }`}
+    >
       {/* Category Badge */}
       <div
-        className="inline-block px-3 py-1 mb-4 font-pixel text-sm text-white border-2"
+        className="inline-block px-3 py-1 mb-4 font-poppins text-sm text-white border-2"
         style={{
           backgroundColor: categoryColors[category] || categoryColors.other,
-          borderColor: 'var(--accent-dark)',
+          borderColor: isMaroon ? 'var(--primary)' : 'var(--accent-dark)',
         }}
       >
         {categoryEmojis[category] || categoryEmojis.other} {category.toUpperCase()}
       </div>
 
       {/* Title */}
-      <h3 className="font-bubbly-title text-sm text-[var(--accent)] mb-3 leading-relaxed">
+      <h3
+        className={`font-perandory text-2xl mb-3 leading-relaxed ${
+          isMaroon ? 'text-primary' : 'text-accent'
+        }`}
+      >
         {title}
       </h3>
 
       {/* Date & Time */}
       <div className="flex items-center gap-2 mb-2">
         <span className="text-lg">📅</span>
-        <span className="font-pixel text-lg text-[var(--foreground)]">
+        <span
+          className={`font-poppins text-lg ${
+            isMaroon ? 'text-primary' : 'text-accent-dark'
+          }`}
+        >
           {formatDate(date)} @ {time}
         </span>
       </div>
@@ -67,13 +84,21 @@ export default function EventCard({
       {/* Location */}
       <div className="flex items-center gap-2 mb-4">
         <span className="text-lg">📍</span>
-        <span className="font-pixel text-lg text-[var(--foreground)]">
+        <span
+          className={`font-poppins text-lg ${
+            isMaroon ? 'text-primary' : 'text-accent-dark'
+          }`}
+        >
           {location}
         </span>
       </div>
 
       {/* Description */}
-      <p className="font-pixel text-base text-[var(--foreground)] opacity-80 leading-relaxed">
+      <p
+        className={`font-poppins text-base leading-relaxed ${
+          isMaroon ? 'text-primary' : 'text-accent-dark'
+        }`}
+      >
         {description}
       </p>
     </div>

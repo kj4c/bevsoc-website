@@ -6,7 +6,7 @@
     "time": "5:00 PM",
     "location": "Campus Lawn",
     "description": "Kick off the semester with drinks and BBQ! Meet new members and catch up with friends~",
-    "image": "/events/bbq.jpg",
+    "image": "/temp_build_boba.png",
     "category": "social"
   },
   {
@@ -16,7 +16,7 @@
     "time": "2:00 PM",
     "location": "Student Center Room 101",
     "description": "Learn about different coffee origins and brewing methods with our expert barista!",
-    "image": "/events/coffee.jpg",
+    "image": "/temp_build_boba.png",
     "category": "workshop"
   },
   {
@@ -26,7 +26,7 @@
     "time": "7:00 PM",
     "location": "Faculty Club",
     "description": "An elegant evening of wine tasting paired with artisanal cheeses. 21+ only!",
-    "image": "/events/wine.jpg",
+    "image": "/temp_build_boba.png",
     "category": "tasting"
   },
   {
@@ -36,7 +36,7 @@
     "time": "1:00 PM",
     "location": "Meet at Main Gate",
     "description": "Join us as we explore the best bubble tea spots around campus! 🧋",
-    "image": "/events/boba.jpg",
+    "image": "/temp_build_boba.png",
     "category": "social"
   },
   {
@@ -46,7 +46,7 @@
     "time": "2222",
     "location": "dadw",
     "description": "2ee",
-    "image": "",
+    "image": "/temp_build_boba.png",
     "category": "other"
   }
 ]
