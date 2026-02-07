@@ -92,7 +92,7 @@ export default function Home() {
                 icon: <UsersRound />,
                 title: 'Community',
                 description: 'Meet fellow beverage enthusiasts who love good drinks and great company!',
-                image: '/director_induction.jpg',
+                image: '/director_induction.JPG',
               },
               {
                 icon: <Wine/>,
