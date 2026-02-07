@@ -188,10 +188,6 @@ body {
 }
 
 /* Navbar blurred bottom edge */
-.navbar-blurred-bottom {
-  position: relative;
-}
-
 .navbar-blurred-bottom::after {
   content: '';
   position: absolute;
@@ -201,18 +197,35 @@ body {
   height: 20px;
   background: linear-gradient(
     to bottom,
-    rgba(107, 45, 60, 0.8) 0%,
+    rgba(107, 45, 60, 0.9) 0%,
     rgba(107, 45, 60, 0.4) 50%,
-    rgba(245, 235, 224, 0.2) 100%
+    transparent 100%
   );
   filter: blur(8px);
   pointer-events: none;
   z-index: -1;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling & scroll snap */
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 64px; /* navbar height */
+}
+
+main section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+footer {
+  scroll-snap-align: start;
 }
 
 /* Pixel-style scrollbar */
@@ -270,11 +283,9 @@ html {
 /* Pixel card/window style */
 .pixel-window {
   background: var(--primary-light);
-  border: 4px solid var(--accent);
-  box-shadow: 
-    8px 8px 0 var(--accent-dark),
-    inset -4px -4px 0 var(--cream),
-    inset 4px 4px 0 white;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(74, 31, 42, 0.15);
 }
 
 .pixel-window-header {

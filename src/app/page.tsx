@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Background Image Carousel - Only in Hero Section */}
         <div className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat">
           <BackgroundCarousel />
@@ -71,42 +71,12 @@ export default function Home() {
               />
             </motion.p>
           </LayoutGroup>
-          
-          {/* Scroll Indicator */}
-          {/* <motion.div
-            className="mt-12 flex flex-col items-center gap-2"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-          >
-            <div className="w-px h-24 bg-accent opacity-60"></div>
-          </motion.div> */}
-          
-          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/events" 
-              className="px-8 py-4 bg-accent text-white rounded-full font-pixel text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-accent-dark shadow-lg"
-              style={{ textShadow: '2px 2px 0px #4a1f2a' }}
-            >
-              🍹 View Events
-            </Link>
-            <Link
-              href="/about"
-              className="px-8 py-4 bg-transparent border-3 border-accent text-accent rounded-full font-pixel text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-accent hover:text-white shadow-lg"
-              style={{ 
-                borderWidth: '3px',
-                textShadow: '1px 1px 0px rgba(255,255,255,0.5)'
-              }}
-            >
-              💕 About Us
-            </Link>
-          </div> */}
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-24 relative bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 min-h-0 overflow-y-auto">
           <div className="text-center mb-16">
             <h2 className="font-perandory text-8xl sm:text-8xl text-primary mb-4">
               What We Offer
@@ -131,7 +101,7 @@ export default function Home() {
             ].map((feature) => (
               <div
                 key={feature.title}
-                className="pixel-window p-6 hover:translate-y-[-4px] transition-transform duration-200"
+                className="pixel-window p-6 hover:-translate-y-1 transition-transform duration-200"
               >
                 <div className="w-5 h-5 mb-4">{feature.icon}</div>
                 <h3 className="font-perandory text-4xl text-accent mb-3 underline underline-1" >
@@ -171,25 +141,28 @@ export default function Home() {
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <LiquidEther
-          colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous={false}
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo={true}
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-        /> 
+      <section className="py-24 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="absolute inset-0 -z-10">
+          <LiquidEther
+            colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full flex-1 flex flex-col justify-center">
           <div className="pixel-window p-8">
             <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-6">
               Ready to Join?

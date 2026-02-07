@@ -1,33 +1,46 @@
+'use client';
+import LiquidEther from '@/components/LiquidEther';
+import CircularGallery from '@/components/CircularGallery';
 import Link from 'next/link';
 
 export default function AboutPage() {
-  const team = [
-    { name: 'Alex Chen', role: 'President' },
-    { name: 'Sarah Kim', role: 'Vice President' },
-    { name: 'Marcus Johnson', role: 'Events Director' },
-    { name: 'Emily Tran', role: 'Treasurer' },
-    { name: 'David Park', role: 'Marketing Lead' },
-    { name: 'Lisa Wang', role: 'Sponsorship Lead' },
+  const teamItems = [
+    { image: '/coffee.png', text: 'Riwaz Bhattachan - President' },
+    { image: '/beer.png', text: 'Nana Thoranine - VP Media' },
+    { image: '/wine.png', text: 'Alicia Ong - VP Creatives' },
+    { image: '/bevz.jpg', text: 'Kayla Lee - VP Events' },
+    { image: '/iced_coffee.jpg', text: 'Zachary Abran - VP IT' },
+    { image: '/bevz.jpg', text: 'Anisa Brar - VP Human Resources' },
+    { image: '/matcha.jpg', text: 'Ethan Gu - Treasurer' },
+    { image: '/matcha.jpg', text: 'Jenny Tang - Secretary' },
   ];
 
   return (
     <div className="relative min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-perandory text-8xl sm:text-8xl text-primary mb-4">
-            About Us
-          </h1>
-          <p className="font-poppins text-4xl text-primary">
-            Learn more about BevSoc!
-          </p>
-        </div>
-      </section>
-
       {/* Mission Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="pixel-window p-8">
+      <section className="pb-24 pt-[calc(6rem+4rem)] relative overflow-hidden flex flex-col items-center justify-center overflow-y-hidden">
+        <div className="absolute inset-0 -z-10">
+          <LiquidEther
+            colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex-1 min-h-0 overflow-hidden flex flex-col items-center justify-center">
+          <div className="pixel-window p-8 w-full">
             <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-6">
               Our Mission
             </h2>
@@ -51,7 +64,7 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-24 relative bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 min-h-0 overflow-y-auto">
           <div className="text-center mb-16">
             <h2 className="font-perandory text-8xl sm:text-8xl text-primary mb-4">
               Our Values
@@ -84,37 +97,32 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-4">
+      <section className="py-8 relative overflow-hidden bg-primary flex flex-col items-center justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center">
+          <div className="text-center mb-6">
+            <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-2">
               Meet the Team
             </h2>
-            <p className="font-poppins text-4xl text-foreground">
+            <p className="font-poppins text-4xl text-accent">
               The people behind BevSoc
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="pixel-window p-6 hover:-translate-y-1 transition-transform duration-200"
-              >
-                <h3 className="font-perandory text-4xl text-accent mb-2 underline underline-1">
-                  {member.name}
-                </h3>
-                <p className="font-poppins text-2xl text-accent-light">
-                  {member.role}
-                </p>
-              </div>
-            ))}
+          <div style={{ height: '450px', position: 'relative' }}>
+            <CircularGallery
+              items={teamItems}
+              bend={1}
+              textColor="#6b2d3c"
+              borderRadius={0.05}
+              scrollSpeed={2}
+              scrollEase={0.2}
+            />
           </div>
         </div>
       </section>
 
       {/* Join CTA */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <section className="py-24 relative overflow-hidden flex flex-col items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full flex-1 flex flex-col justify-center">
           <div className="pixel-window p-8">
             <h2 className="font-perandory text-8xl sm:text-8xl text-accent mb-6">
               Want to Join?

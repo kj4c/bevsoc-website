@@ -16,7 +16,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-accent navbar-blurred-bottom">
+    <nav className="fixed top-0 left-0 right-0 z-[9999] bg-accent navbar-blurred-bottom">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center h-16">
           {/* Logo - Far Left */}

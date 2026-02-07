@@ -11,7 +11,7 @@ export default function Footer() {
               <img src="/bevsoc_brown.png" alt="BevSoc" className="w-full h-full object-contain" />
             </Link>
             <p className="text-pink-light font-poppins text-lg max-w-md">
-              The cutest beverage appreciation society! Join us for tastings, events, 
+              The first beverage appreciation society! Join us for tastings, events, 
               and good vibes
             </p>
           </div>
