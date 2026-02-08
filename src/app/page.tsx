@@ -1,32 +1,39 @@
-import type { Metadata } from 'next';
+'use client';
 import Link from 'next/link';
+import Sparkles from '@/components/Sparkles';
+import Bubbles from '@/components/Bubbles';
 import RotatingText from '@/components/RotatingText';
-import { motion, LayoutGroup } from 'motion/react';
+import { motion, LayoutGroup, AnimatePresence } from 'motion/react';
+import { useState, useEffect } from 'react';
 import LiquidEther from '@/components/LiquidEther';
 import BackgroundCarousel from '@/components/BackgroundCarousel';
 import { CalendarFold, UsersRound, Wine } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'UNSW Beverage Society (BevSoc) | Events & Tastings',
-  description:
-    'UNSW Beverage Society (BevSoc) is a student-run society at UNSW hosting beverage tastings, social events, and industry nights.',
-};
-
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      {/* SEO signals (keep design unchanged) */}
-      <h1 className="sr-only">UNSW Beverage Society (BevSoc)</h1>
-      <p className="mt-4 max-w-3xl text-center font-poppins text-base sm:text-lg text-white/90">
-        UNSW Beverage Society (BevSoc) is a student-run society at UNSW hosting beverage tastings,
-        social events, and industry nights.
-      </p>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[calc(6rem+4rem)] pb-24">
         {/* Background Image Carousel - Only in Hero Section */}
         <div className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat">
           <BackgroundCarousel />
+            {/* <LiquidEther
+          colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+        />  */}
         </div>
         {/* Content */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
@@ -42,10 +49,7 @@ export default function Home() {
           </div>
           
           <LayoutGroup>
-            <motion.h2
-              className="flex items-center justify-center gap-5 text-white text-shadow-lg pt-6 sm:pt-0 text-[3.375rem] sm:text-5xl md:text-6xl lg:text-7xl"
-              layout
-            >
+            <motion.p className="flex items-center justify-center gap-5 text-white text-shadow-lg pt-6 sm:pt-0 text-[3.375rem] sm:text-5xl md:text-6xl lg:text-7xl" layout>
               <motion.span
                 className="font-perandory"
                 layout
@@ -65,7 +69,7 @@ export default function Home() {
                 transition={{ type: 'spring', damping: 30, stiffness: 400 }}
                 rotationInterval={2000}
               />
-            </motion.h2>
+            </motion.p>
           </LayoutGroup>
         </div>
       </section>
@@ -129,6 +133,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Stats Section */}
+        {/* <section className="py-20 relative overflow-hidden">
+        <Sparkles />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { value: '500+', label: 'Members' },
+              { value: '50+', label: 'Events' },
+              { value: '20+', label: 'Sponsors' },
+              { value: '3', label: 'Years' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="font-bubbly-title text-2xl sm:text-3xl text-primary mb-2">
+                  {stat.value}
+                </div>
+                <div className="font-pixel text-lg text-pink-light uppercase">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-24 relative overflow-hidden flex flex-col items-center justify-center">
