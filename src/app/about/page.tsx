@@ -174,12 +174,17 @@ export default function AboutPage() {
               We&apos;d love to have you! Reach out to us or join our Discord to stay updated.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="mailto:contact@bevsoc.com"
-                className="pixel-btn flex items-center gap-2"
-              >
-                Get in Touch
-              </a>
+                  <a
+                  href="https://campus.hellorubric.com/?s=13447&fbclid=IwY2xjawP0u95leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeknXItBQQxLz1gZgQVe0vgb1JBR0fBdAE6FpN_9LP_b_F40BNHL_Zyf-Lc-U_aem_blBqFxhOgp5rxayx7h8c6A"
+                  className="pixel-btn flex items-center gap-2"
+                  >
+                  <img
+                    src="/rubric.png"
+                    alt="Rubric"
+                    className="w-5 h-5 object-contain"
+                  />
+                  Join on Rubric
+                  </a>
               <a
                 href="https://discord.gg/bevsoc"
                 target="_blank"

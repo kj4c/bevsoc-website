@@ -38,6 +38,19 @@ export default function Footer() {
             <h3 className="text-[var(--primary)] font-poppins text-lg sm:text-xl mb-4">Connect</h3>
             <div className="flex gap-3">
               <a
+                href="https://campus.hellorubric.com/?s=13447&fbclid=IwY2xjawP0u95leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEeknXItBQQxLz1gZgQVe0vgb1JBR0fBdAE6FpN_9LP_b_F40BNHL_Zyf-Lc-U_aem_blBqFxhOgp5rxayx7h8c6A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-[var(--accent-dark)] border-2 border-[var(--accent-light)] flex items-center justify-center text-[var(--pink-light)] hover:bg-[var(--accent-light)] hover:text-white transition-all duration-200"
+                aria-label="Rubric"
+              >
+                <img
+                  src="/rubric.png"
+                  alt="Rubric"
+                  className="w-5 h-5 object-contain"
+                />
+              </a>
+              <a
                 href="https://discord.gg/bevsoc"
                 target="_blank"
                 rel="noopener noreferrer"

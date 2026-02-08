@@ -77,7 +77,12 @@ export default function SponsorsPage() {
             <p className="font-poppins text-base sm:text-xl text-accent-dark mb-6">
               Partner with BevSoc and reach our community!
             </p>
-            <a href="mailto:sponsors@bevsoc.com" className="pixel-btn">
+            <a
+              href="mailto:sponsors@bevsoc.com"
+              className="pixel-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Contact Us
             </a>
           </div>
