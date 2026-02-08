@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://bevsoc-website.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://unswbevsoc.vercel.app';
   const lastModified = new Date(process.env.VERCEL_GIT_COMMIT_TIMESTAMP ?? Date.now());
 
   return [
