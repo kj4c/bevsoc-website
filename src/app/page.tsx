@@ -9,7 +9,7 @@ import LiquidEther from '@/components/LiquidEther';
 import BackgroundCarousel from '@/components/BackgroundCarousel';
 import { CalendarFold, UsersRound, Wine } from 'lucide-react';
 
-export default function HomeClient() {
+export default function Home() {
   return (
     <div className="relative min-h-screen">
       {/* Hero Section */}
