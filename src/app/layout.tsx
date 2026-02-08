@@ -75,6 +75,7 @@ export const metadata: Metadata = {
   verification: {
     google: "NC2YnvFszmxkFE9B924OxrsIJf0wl0KS3Jla9_GY418",
   },
+  applicationName: "BevSoc",
   icons: {
     icon: [{ url: "/bevsoclogo_maroon.png", type: "image/png" }],
   },
