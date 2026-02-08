@@ -9,13 +9,9 @@ import LiquidEther from '@/components/LiquidEther';
 import BackgroundCarousel from '@/components/BackgroundCarousel';
 import { CalendarFold, UsersRound, Wine } from 'lucide-react';
 
-export default function HomeClient() {
+export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <h1 className="sr-only">UNSW Beverage Society (BevSoc)</h1>
-      <p className="sr-only">
-        UNSW Beverage Society (BevSoc) is a student-run society at UNSW hosting beverage tastings, social events, and industry nights.
-      </p>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[calc(6rem+4rem)] pb-24">
         {/* Background Image Carousel - Only in Hero Section */}
@@ -120,7 +116,7 @@ export default function HomeClient() {
                 <div className="group relative w-full h-44 sm:h-52 lg:h-60 rounded-lg overflow-hidden bg-cream mt-auto">
                   <img
                     src={feature.image}
-                    alt={`Image representing ${feature.title}`}
+                    alt={feature.title}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/40" aria-hidden />
