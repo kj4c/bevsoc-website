@@ -72,6 +72,12 @@ const poppins = localFont({
 export const metadata: Metadata = {
   title: "BevSoc | Beverage Appreciation Society",
   description: "Join BevSoc - the premier beverage appreciation society. Discover events, meet fellow enthusiasts, and explore the art of drinks.",
+  verification: {
+    google: "NC2YnvFszmxkFE9B924OxrsIJf0wl0KS3Jla9_GY418",
+  },
+  icons: {
+    icon: [{ url: "/bevsoclogo_maroon.png", type: "image/png" }],
+  },
 };
 
 export const viewport = {
