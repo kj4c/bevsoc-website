@@ -186,7 +186,7 @@ export default function Home() {
               Ready to Join?
             </h2>
             <p className="font-poppins text-base sm:text-xl text-foreground mb-6 sm:mb-8">
-              Become part of our growing community! Join our Discord to stay updated
+              Become part of our growing community! Follow us on Facebook or Instagram to stay updated.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -203,6 +203,7 @@ export default function Home() {
                 Join on Rubric
               </a>
 
+              {/* Discord button commented out until server is ready
               <a
                 href="https://discord.gg/bevsoc"
                 target="_blank"
@@ -214,10 +215,33 @@ export default function Home() {
                 </svg>
                 Join Discord
               </a>
+              */}
 
-              <Link href="/events" className="pixel-btn flex items-center gap-2">
-                <CalendarFold className="w-5 h-5" /> See Events
-              </Link>
+              <a
+                href="https://www.facebook.com/profile.php?id=61581669824171"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pixel-btn flex items-center gap-2"
+              >
+                <span>Visit</span>
+                {/* Simple Facebook \"f\" logo */}
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white text-[var(--accent)] font-bold text-sm">
+                  f
+                </span>
+              </a>
+
+              <a
+                href="https://instagram.com/unswbevsoc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pixel-btn flex items-center gap-2"
+              >
+                <span>Visit</span>
+                {/* Simple Instagram glyph */}
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-md border border-white">
+                  <span className="w-3 h-3 rounded-full border border-white" />
+                </span>
+              </a>
             </div>
           </div>
         </div>

@@ -107,8 +107,9 @@ export default function EventsPage() {
             Never Miss an Event
           </h2>
           <p className="text-[var(--pink-light)] font-poppins text-base sm:text-lg mb-4">
-            Join our Discord to get notified about new events.
+            Follow us on Facebook or Instagram to get notified about new events.
           </p>
+          {/* Discord link commented out until server is ready
           <a
             href="https://discord.gg/bevsoc"
             target="_blank"
@@ -117,6 +118,33 @@ export default function EventsPage() {
           >
             → Join Discord
           </a>
+          */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <a
+              href="https://www.facebook.com/profile.php?id=61581669824171"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-base sm:text-lg"
+            >
+              <span>Visit</span>
+              {/* Simple Facebook \"f\" logo */}
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[var(--pink-light)] text-[var(--accent)] font-bold text-sm">
+                f
+              </span>
+            </a>
+            <a
+              href="https://instagram.com/unswbevsoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[var(--pink-light)] hover:text-white transition-colors font-poppins text-base sm:text-lg"
+            >
+              <span>Visit</span>
+              {/* Simple Instagram glyph */}
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-md border border-[var(--pink-light)]">
+                <span className="w-3 h-3 rounded-full border border-[var(--pink-light)]" />
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </div>

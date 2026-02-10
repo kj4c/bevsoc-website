@@ -550,6 +550,10 @@ class App {
   }
 
   onTouchDown(e: MouseEvent | TouchEvent) {
+    // Prevent page scroll when interacting with the gallery
+    if ('preventDefault' in e) {
+      e.preventDefault();
+    }
     this.isDown = true;
     this.scroll.position = this.scroll.current;
     this.start = 'touches' in e ? e.touches[0].clientX : e.clientX;
@@ -557,6 +561,10 @@ class App {
 
   onTouchMove(e: MouseEvent | TouchEvent) {
     if (!this.isDown) return;
+    // Prevent vertical page scroll while dragging horizontally
+    if ('preventDefault' in e) {
+      e.preventDefault();
+    }
     const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const distance = (this.start - x) * (this.scrollSpeed * 0.025);
     this.scroll.target = (this.scroll.position ?? 0) + distance;
@@ -613,32 +621,38 @@ class App {
 
   addEventListeners() {
     this.boundOnResize = this.onResize.bind(this);
-    this.boundOnWheel = this.onWheel.bind(this);
     this.boundOnTouchDown = this.onTouchDown.bind(this);
     this.boundOnTouchMove = this.onTouchMove.bind(this);
     this.boundOnTouchUp = this.onTouchUp.bind(this);
+
+    // Only listen for resize globally
     window.addEventListener('resize', this.boundOnResize);
-    window.addEventListener('mousewheel', this.boundOnWheel);
-    window.addEventListener('wheel', this.boundOnWheel);
-    window.addEventListener('mousedown', this.boundOnTouchDown);
-    window.addEventListener('mousemove', this.boundOnTouchMove);
-    window.addEventListener('mouseup', this.boundOnTouchUp);
-    window.addEventListener('touchstart', this.boundOnTouchDown);
-    window.addEventListener('touchmove', this.boundOnTouchMove);
-    window.addEventListener('touchend', this.boundOnTouchUp);
+
+    // Attach pointer / touch events to the gallery container only,
+    // so scrolling the page with the mouse wheel is unaffected.
+    const opts: AddEventListenerOptions = { passive: false };
+    this.container.addEventListener('mousedown', this.boundOnTouchDown);
+    this.container.addEventListener('mousemove', this.boundOnTouchMove);
+    this.container.addEventListener('mouseup', this.boundOnTouchUp);
+    this.container.addEventListener('mouseleave', this.boundOnTouchUp);
+    this.container.addEventListener('touchstart', this.boundOnTouchDown, opts);
+    this.container.addEventListener('touchmove', this.boundOnTouchMove, opts);
+    this.container.addEventListener('touchend', this.boundOnTouchUp);
+    this.container.addEventListener('touchcancel', this.boundOnTouchUp);
   }
 
   destroy() {
     window.cancelAnimationFrame(this.raf);
     window.removeEventListener('resize', this.boundOnResize);
-    window.removeEventListener('mousewheel', this.boundOnWheel);
-    window.removeEventListener('wheel', this.boundOnWheel);
-    window.removeEventListener('mousedown', this.boundOnTouchDown);
-    window.removeEventListener('mousemove', this.boundOnTouchMove);
-    window.removeEventListener('mouseup', this.boundOnTouchUp);
-    window.removeEventListener('touchstart', this.boundOnTouchDown);
-    window.removeEventListener('touchmove', this.boundOnTouchMove);
-    window.removeEventListener('touchend', this.boundOnTouchUp);
+
+    this.container.removeEventListener('mousedown', this.boundOnTouchDown);
+    this.container.removeEventListener('mousemove', this.boundOnTouchMove);
+    this.container.removeEventListener('mouseup', this.boundOnTouchUp);
+    this.container.removeEventListener('mouseleave', this.boundOnTouchUp);
+    this.container.removeEventListener('touchstart', this.boundOnTouchDown);
+    this.container.removeEventListener('touchmove', this.boundOnTouchMove);
+    this.container.removeEventListener('touchend', this.boundOnTouchUp);
+    this.container.removeEventListener('touchcancel', this.boundOnTouchUp);
     if (this.renderer && this.renderer.gl && this.renderer.gl.canvas.parentNode) {
       this.renderer.gl.canvas.parentNode.removeChild(this.renderer.gl.canvas as HTMLCanvasElement);
     }

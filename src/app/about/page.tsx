@@ -79,7 +79,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { title: 'Inclusivity', desc: 'Everyone is welcome, from novices to experts.' },
+              { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
               { title: 'Community', desc: 'Building friendships over shared sips and good vibes.' },
               { title: 'Responsibility', desc: 'Mindful consumption and safe, inclusive enjoyment for all.' },
             ].map((value) => (
@@ -171,7 +171,7 @@ export default function AboutPage() {
               Want to Join?
             </h2>
             <p className="font-poppins text-base sm:text-xl text-foreground mb-6 sm:mb-8">
-              We&apos;d love to have you! Reach out to us or join our Discord to stay updated.
+              We&apos;d love to have you! Reach out to us or follow us on Facebook or Instagram to stay updated.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
@@ -185,6 +185,7 @@ export default function AboutPage() {
                   />
                   Join on Rubric
                   </a>
+              {/* Discord button commented out until server is ready
               <a
                 href="https://discord.gg/bevsoc"
                 target="_blank"
@@ -196,6 +197,7 @@ export default function AboutPage() {
                 </svg>
                 Join Discord
               </a>
+              */}
               <Link href="/events" className="pixel-btn flex items-center gap-2">See Events</Link>
             </div>
           </div>
