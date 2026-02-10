@@ -12,6 +12,7 @@ interface Event {
   time: string;
   location: string;
   description: string;
+  link: string;
   image?: string;
   category: string;
 }
