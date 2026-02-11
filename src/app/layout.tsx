@@ -79,6 +79,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/bevsoclogo_maroon.png", type: "image/png" }],
   },
+  metadataBase: new URL("https://unswbevsoc.vercel.app"),
+  alternates: {
+    canonical: "https://unswbevsoc.vercel.app/",
+  },
 };
 
 export const viewport = {
