@@ -40,5 +40,10 @@ export const sponsors: Sponsor[] = [
     logo: '/sponsorlogos/littlered.png',
     url: 'https://littleredsydney.com.au/',
   },
+  {
+    name: 'Matcha Monster',
+    logo: '/sponsorlogos/matchamonster.png',
+    url: 'https://www.instagram.com/matchamonster5525?igsh=MTFoaDdyazg4b280MA%3D%3D',
+  }
 ];
 

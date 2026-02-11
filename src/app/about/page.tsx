@@ -5,18 +5,18 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   const teamItems = [
-    { image: '/coffee.png', text: 'Riwaz Bhattachan - President' },
-    { image: '/beer.png', text: 'Nana Thoranine - VP Media' },
-    { image: '/wine.png', text: 'Alicia Ong - VP Creatives' },
-    { image: '/bevz.jpg', text: 'Kayla Lee - VP Events' },
-    { image: '/iced_coffee.jpg', text: 'Zachary Abran - VP IT' },
-    { image: '/bevz.jpg', text: 'Anisa Brar - VP Human Resources' },
-    { image: '/bevz.jpg', text: 'Selina Yan - VP Sponsorships' },
-    { image: '/matcha.jpg', text: 'Ethan Gu - Treasurer' },
-    { image: '/matcha.jpg', text: 'Jenny Tang - Secretary' },
-    { image: '/matcha.jpg', text: 'Alex Lum - Arc Delegate' },
-    { image: '/matcha.jpg', text: 'Sean Wang - GEDI' },
-    { image: '/matcha.jpg', text: 'Olivia Oh - GEDI' },
+    { image: '/execs_pics/riwaz.png', text: 'Riwaz Bhattachan - President' },
+    { image: '/execs_pics/nana.png', text: 'Nana Thoranine - VP Media' },
+    { image: '/execs_pics/alicia.png', text: 'Alicia Ong - VP Creatives' },
+    { image: '/execs_pics/kayla.png', text: 'Kayla Lee - VP Events' },
+    { image: '/execs_pics/zac.png', text: 'Zachary Abran - VP IT' },
+    { image: '/execs_pics/anisa.jpg', text: 'Anisa Brar - VP Human Resources' },
+    { image: '/execs_pics/selina.png', text: 'Selina Yan - VP Sponsorships' },
+    { image: '/execs_pics/ethan.png', text: 'Ethan Gu - Treasurer' },
+    { image: '/execs_pics/jenny.JPG', text: 'Jenny Tang - Secretary' },
+    { image: '/execs_pics/alex.png', text: 'Alex Lum - Arc Delegate' },
+    { image: '/execs_pics/sean.png', text: 'Sean Wang - GEDI' },
+    { image: '/execs_pics/olivia.png', text: 'Olivia Oh - GEDI' },
   ];
 
   return (
