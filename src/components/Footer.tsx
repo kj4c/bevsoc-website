@@ -75,7 +75,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:contact@bevsoc.com"
+                href="mailto:unswbevsoc@gmail.com"
                 className="w-10 h-10 bg-[var(--accent-dark)] border-2 border-[var(--accent-light)] flex items-center justify-center text-[var(--pink-light)] hover:bg-[var(--accent-light)] hover:text-white transition-all duration-200"
                 aria-label="Email"
               >

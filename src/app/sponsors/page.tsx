@@ -1,30 +1,9 @@
 'use client';
 
 import LiquidEther from '@/components/LiquidEther';
+import { sponsors } from '@/data/sponsors';
 
 export default function SponsorsPage() {
-  const sponsors = [
-    {
-      name: 'Genki',
-      logo: '/sponsorlogos/genki.png',
-      url: 'https://www.yuanqisenlin.com/',
-    },
-    {
-      name: 'Wootea',
-      logo: '/sponsorlogos/wootea.png',
-      url: 'https://wootea.com.au/',
-    },
-    {
-      name: 'Ohmoyo',
-      logo: '/sponsorlogos/ohmoyo_transparent.png',
-      url: 'https://www.ohmyyo.com.au/',
-    },
-    {
-      name: 'Nihao',
-      logo: '/sponsorlogos/nihao.webp',
-      url: 'https://nihaobar.com.au/',
-    },
-  ];
 
   return (
     <div className="relative min-h-screen no-snap">
@@ -72,11 +51,21 @@ export default function SponsorsPage() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center hover:-translate-y-1 transition-transform duration-200"
               >
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="w-full h-auto max-h-32 sm:max-h-40 object-contain"
-                />
+                {sponsor.name === 'Kowloon Cafe' ? (
+                  <div className="w-3/5 max-h-24 sm:max-h-32 aspect-square bg-black rounded-lg flex items-center justify-center">
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="w-4/5 h-4/5 object-contain"
+                    />
+                  </div>
+                ) : (
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="w-full h-auto max-h-32 sm:max-h-40 object-contain"
+                  />
+                )}
               </a>
             ))}
           </div>
