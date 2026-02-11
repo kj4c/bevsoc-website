@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function AboutPage() {
   const teamItems = [
     { image: '/execs_pics/riwaz.png', text: 'Riwaz Bhattachan - President' },
-    { image: '/execs_pics/nana.png', text: 'Nana Thoranine - VP Media' },
+    { image: '/execs_pics/nana.png', text: 'Nana Thoranine - VP Productions' },
     { image: '/execs_pics/alicia.png', text: 'Alicia Ong - VP Creatives' },
     { image: '/execs_pics/kayla.png', text: 'Kayla Lee - VP Events' },
     { image: '/execs_pics/zac.png', text: 'Zachary Abran - VP IT' },
