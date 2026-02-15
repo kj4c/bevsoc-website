@@ -93,7 +93,7 @@ export default function AboutPage() {
             {[
               { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
               { title: 'Community', desc: 'Building friendships over shared sips and good vibes.' },
-              { title: 'Responsibility', desc: 'Mindful consumption and safe, inclusive enjoyment for all.' },
+              { title: 'Responsibility', desc: 'Mindful consumption and safe, inclusive enjoyment for all.'},
             ].map((value) => (
               <div
                 key={value.title}
