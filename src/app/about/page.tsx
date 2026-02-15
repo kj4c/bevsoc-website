@@ -92,7 +92,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
-              { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
               { title: 'Community', desc: 'Building friendships over shared sips and good vibes.' },
               { title: 'Responsibility', desc: 'Mindful consumption and safe, inclusive enjoyment for all.' },
             ].map((value) => (
