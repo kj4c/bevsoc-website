@@ -17,6 +17,18 @@ export default function AboutPage() {
     { image: '/execs_pics/alex.png', text: 'Alex Lum - Arc Delegate' },
     { image: '/execs_pics/sean.png', text: 'Sean Wang - GEDI' },
     { image: '/execs_pics/olivia.png', text: 'Olivia Oh - GEDI' },
+    { image: '/execs_pics/riwaz.png', text: 'Riwaz Bhattachan - President' },
+    { image: '/execs_pics/nana.png', text: 'Nana Thoranine - VP Productions' },
+    { image: '/execs_pics/alicia.png', text: 'Alicia Ong - VP Creatives' },
+    { image: '/execs_pics/kayla.png', text: 'Kayla Lee - VP Events' },
+    { image: '/execs_pics/zac.png', text: 'Zachary Abran - VP IT' },
+    { image: '/execs_pics/anisa.jpg', text: 'Anisa Brar - VP Human Resources' },
+    { image: '/execs_pics/selina.png', text: 'Selina Yan - VP Sponsorships' },
+    { image: '/execs_pics/ethan.png', text: 'Ethan Gu - Treasurer' },
+    { image: '/execs_pics/jenny.JPG', text: 'Jenny Tang - Secretary' },
+    { image: '/execs_pics/alex.png', text: 'Alex Lum - Arc Delegate' },
+    { image: '/execs_pics/sean.png', text: 'Sean Wang - GEDI' },
+    { image: '/execs_pics/olivia.png', text: 'Olivia Oh - GEDI' },
   ];
 
   return (
@@ -79,6 +91,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
+              { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
               { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
               { title: 'Community', desc: 'Building friendships over shared sips and good vibes.' },
               { title: 'Responsibility', desc: 'Mindful consumption and safe, inclusive enjoyment for all.' },
@@ -172,6 +185,7 @@ export default function AboutPage() {
             </h2>
             <p className="font-poppins text-base sm:text-xl text-foreground mb-6 sm:mb-8">
               We&apos;d love to have you! Reach out to us or follow us on Facebook or Instagram to stay updated.
+              We&apos;d love to have you! Reach out to us or follow us on Facebook or Instagram to stay updated.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
@@ -186,6 +200,7 @@ export default function AboutPage() {
                   Join on Rubric
                   </a>
               {/* Discord button commented out until server is ready
+              {/* Discord button commented out until server is ready
               <a
                 href="https://discord.gg/bevsoc"
                 target="_blank"
@@ -197,6 +212,7 @@ export default function AboutPage() {
                 </svg>
                 Join Discord
               </a>
+              */}
               */}
               <Link href="/events" className="pixel-btn flex items-center gap-2">See Events</Link>
             </div>
