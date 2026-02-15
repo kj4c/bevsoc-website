@@ -12,7 +12,13 @@ module.exports = {
       {
         source: "/:path*",
         has: [{ type: "host", value: "bevsoc-website.vercel.app" }],
-        destination: "https://unswbevsoc.vercel.app/:path*",
+        destination: "https://www.unswbevsoc.org/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "unswbevsoc.vercel.app" }],
+        destination: "https://www.unswbevsoc.org/:path*",
         permanent: true,
       },
     ];
