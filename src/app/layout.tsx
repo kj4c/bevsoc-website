@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   title: "BevSoc | Beverage Appreciation Society",
   description: "Join BevSoc - the premier beverage appreciation society. Discover events, meet fellow enthusiasts, and explore the art of drinks.",
   verification: {
-    google: "NC2YnvFszmxkFE9B924OxrsIJf0wl0KS3Jla9_GY418",
+    google: "jzpNqT957sqnY2DG3hien95yS3QWE2PwbJghqnYoJGs",
   },
   applicationName: "BevSoc",
   icons: {
