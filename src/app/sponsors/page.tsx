@@ -1,19 +1,9 @@
 'use client';
 
 import LiquidEther from '@/components/LiquidEther';
+import { sponsors } from '@/data/sponsors';
 
 export default function SponsorsPage() {
-  const sponsors = [
-    { name: 'Premium Beverages Co' },
-    { name: 'Craft Coffee Roasters' },
-    { name: 'Local Brewery' },
-    { name: 'Tea House' },
-    { name: 'Juice Bar' },
-    { name: 'Campus Cafe' },
-    { name: 'Snack Shop' },
-    { name: 'Bubble Tea Place' },
-    { name: 'Smoothie Stand' },
-  ];
 
   return (
     <div className="relative min-h-screen no-snap">
@@ -52,21 +42,31 @@ export default function SponsorsPage() {
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
             {sponsors.map((sponsor) => (
-              <div
+              <a
                 key={sponsor.name}
-                className="pixel-window p-6 hover:-translate-y-1 transition-transform duration-200 border-l-4 border-accent"
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center hover:-translate-y-1 transition-transform duration-200"
               >
-                <div className="w-12 h-12 mb-3 rounded-full border-2 border-accent flex items-center justify-center text-accent">
-                  <span className="font-perandory text-xl">
-                    {sponsor.name.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="font-perandory text-xl sm:text-2xl text-accent">
-                  {sponsor.name}
-                </h3>
-              </div>
+                {sponsor.name === 'Kowloon Cafe' ? (
+                  <div className="w-3/5 max-h-24 sm:max-h-32 aspect-square bg-black rounded-lg flex items-center justify-center">
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="w-4/5 h-4/5 object-contain"
+                    />
+                  </div>
+                ) : (
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="w-full h-auto max-h-32 sm:max-h-40 object-contain"
+                  />
+                )}
+              </a>
             ))}
           </div>
 
@@ -78,7 +78,7 @@ export default function SponsorsPage() {
               Partner with BevSoc and reach our community!
             </p>
             <a
-              href="mailto:sponsors@bevsoc.com"
+              href="mailto:sponsorshipbevsoc@gmail.com"
               className="pixel-btn"
               target="_blank"
               rel="noopener noreferrer"
