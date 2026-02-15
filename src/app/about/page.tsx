@@ -17,12 +17,24 @@ export default function AboutPage() {
     { image: '/execs_pics/alex.png', text: 'Alex Lum - Arc Delegate' },
     { image: '/execs_pics/sean.png', text: 'Sean Wang - GEDI' },
     { image: '/execs_pics/olivia.png', text: 'Olivia Oh - GEDI' },
+    { image: '/execs_pics/riwaz.png', text: 'Riwaz Bhattachan - President' },
+    { image: '/execs_pics/nana.png', text: 'Nana Thoranine - VP Productions' },
+    { image: '/execs_pics/alicia.png', text: 'Alicia Ong - VP Creatives' },
+    { image: '/execs_pics/kayla.png', text: 'Kayla Lee - VP Events' },
+    { image: '/execs_pics/zac.png', text: 'Zachary Abran - VP IT' },
+    { image: '/execs_pics/anisa.jpg', text: 'Anisa Brar - VP Human Resources' },
+    { image: '/execs_pics/selina.png', text: 'Selina Yan - VP Sponsorships' },
+    { image: '/execs_pics/ethan.png', text: 'Ethan Gu - Treasurer' },
+    { image: '/execs_pics/jenny.JPG', text: 'Jenny Tang - Secretary' },
+    { image: '/execs_pics/alex.png', text: 'Alex Lum - Arc Delegate' },
+    { image: '/execs_pics/sean.png', text: 'Sean Wang - GEDI' },
+    { image: '/execs_pics/olivia.png', text: 'Olivia Oh - GEDI' },
   ];
 
   return (
     <div className="relative min-h-screen">
       {/* Mission Section */}
-      <section className="py-12 sm:py-16 pt-[calc(6rem+4rem)] pb-24 relative overflow-visible flex flex-col items-center justify-center">
+      <section className="snap-start-flow py-12 sm:py-16 pt-[calc(6rem+4rem)] pb-24 relative overflow-visible flex flex-col items-center justify-center">
         <div className="absolute inset-0 -z-10">
           <LiquidEther
             colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
@@ -43,7 +55,7 @@ export default function AboutPage() {
             className="absolute inset-0 w-full h-full"
           />
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex-1 min-h-0 flex flex-col items-center justify-center py-6 sm:py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex-1 min-h-0 flex flex-col items-center justify-center py-8 sm:py-14">
           <div className="pixel-window p-6 sm:p-8 w-full">
             <h2 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent mb-4 sm:mb-6">
               Our Mission
@@ -66,9 +78,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-12 sm:py-16 lg:py-24 relative bg-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Values Section - full viewport on desktop so only this section is visible when snapped */}
+      <section className="snap-start-flow min-h-screen py-12 sm:py-16 lg:py-24 relative bg-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <div className="text-center mb-8 sm:mb-16">
             <h2 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary mb-4">
               Our Values
@@ -79,6 +91,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {[
+              { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
               { title: 'Inclusivity', desc: 'All beverage lovers are welcomed!' },
               { title: 'Community', desc: 'Building friendships over shared sips and good vibes.' },
               { title: 'Responsibility', desc: 'Mindful consumption and safe, inclusive enjoyment for all.' },
@@ -100,7 +113,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-6 sm:py-8 relative overflow-hidden flex flex-col items-center justify-center">
+      <section className="snap-start-flow pt-12 pb-6 sm:pt-16 sm:pb-8 relative overflow-hidden flex flex-col items-center justify-center">
         <div className="absolute inset-0 -z-10">
           <LiquidEther
             colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
@@ -144,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* Join CTA */}
-      <section className="py-12 sm:py-16 lg:py-24 relative overflow-hidden flex flex-col items-center justify-center">
+      <section className="snap-start-flow py-12 sm:py-16 lg:py-24 relative overflow-hidden flex flex-col items-center justify-center">
         <div className="absolute inset-0 -z-10">
           <LiquidEther
             colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
@@ -172,6 +185,7 @@ export default function AboutPage() {
             </h2>
             <p className="font-poppins text-base sm:text-xl text-foreground mb-6 sm:mb-8">
               We&apos;d love to have you! Reach out to us or follow us on Facebook or Instagram to stay updated.
+              We&apos;d love to have you! Reach out to us or follow us on Facebook or Instagram to stay updated.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
@@ -186,6 +200,7 @@ export default function AboutPage() {
                   Join on Rubric
                   </a>
               {/* Discord button commented out until server is ready
+              {/* Discord button commented out until server is ready
               <a
                 href="https://discord.gg/bevsoc"
                 target="_blank"
@@ -197,6 +212,7 @@ export default function AboutPage() {
                 </svg>
                 Join Discord
               </a>
+              */}
               */}
               <Link href="/events" className="pixel-btn flex items-center gap-2">See Events</Link>
             </div>
