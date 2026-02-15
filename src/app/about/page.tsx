@@ -22,7 +22,7 @@ export default function AboutPage() {
   return (
     <div className="relative min-h-screen">
       {/* Mission Section */}
-      <section className="pb-24 pt-[calc(6rem+4rem)] relative overflow-hidden flex flex-col items-center justify-center overflow-y-hidden">
+      <section className="py-12 sm:py-16 pt-[calc(6rem+4rem)] pb-24 relative overflow-visible flex flex-col items-center justify-center">
         <div className="absolute inset-0 -z-10">
           <LiquidEther
             colors={[ '#faf0e8', '#e8ddd4', '#e8ddd4' ]}
@@ -43,7 +43,7 @@ export default function AboutPage() {
             className="absolute inset-0 w-full h-full"
           />
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex-1 min-h-0 overflow-hidden flex flex-col items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex-1 min-h-0 flex flex-col items-center justify-center py-6 sm:py-8">
           <div className="pixel-window p-6 sm:p-8 w-full">
             <h2 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent mb-4 sm:mb-6">
               Our Mission
