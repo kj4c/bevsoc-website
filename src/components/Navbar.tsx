@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-[9999] bg-accent navbar-blurred-bottom">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex items-center h-16">
+        <div className="relative flex items-center h-16">
           {/* Logo - Far Left */}
           <Link href="/" className="flex items-center gap-3 group shrink-0 bg-primary p-2 rounded-full">
             <img src="/bevsoc_brown.png" alt="BevSoc" className="w-10 h-10 object-contain" />
@@ -48,10 +48,20 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile: Upcoming Events link centered, same font as nav */}
+          <Link
+            href="/events"
+            className={`md:hidden absolute left-1/2 -translate-x-1/2 font-perandory text-4xl sm:text-4xl transition-colors whitespace-nowrap ${
+              pathname === '/events' ? 'text-white' : 'text-primary hover:text-white'
+            }`}
+          >
+            EVENTS
+          </Link>
+
+          {/* Mobile Menu Button - pushed right on mobile */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-primary hover:text-white transition-colors"
+            className="md:hidden ml-auto p-2 text-primary hover:text-white transition-colors relative z-10"
             aria-label="Toggle menu"
           >
             <svg
