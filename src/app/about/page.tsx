@@ -213,7 +213,6 @@ export default function AboutPage() {
                 Join Discord
               </a>
               */}
-              */}
               <Link href="/events" className="pixel-btn flex items-center gap-2">See Events</Link>
             </div>
           </div>
