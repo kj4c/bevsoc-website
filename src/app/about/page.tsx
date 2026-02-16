@@ -200,7 +200,6 @@ export default function AboutPage() {
                   Join on Rubric
                   </a>
               {/* Discord button commented out until server is ready
-              {/* Discord button commented out until server is ready
               <a
                 href="https://discord.gg/bevsoc"
                 target="_blank"
@@ -212,7 +211,6 @@ export default function AboutPage() {
                 </svg>
                 Join Discord
               </a>
-              */}
               */}
               <Link href="/events" className="pixel-btn flex items-center gap-2">See Events</Link>
             </div>
