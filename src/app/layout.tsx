@@ -77,25 +77,15 @@ export const metadata: Metadata = {
     template: "%s | BevSoc UNSW",
   },
   description:
-    "BevSoc (also known as BSoc) is UNSW's Beverage Appreciation Society — the Beverage Society at UNSW Sydney. Whether you search for BevSoc, Bev Soc, UNSW Beverage Society, Society Beverage UNSW, or UNSW BSoc, you'll find us here. Join BevSoc to discover events, meet fellow beverage enthusiasts, and explore the art of drinks at UNSW.",
+    "BevSoc is UNSW's Beverage Appreciation Society. Join BevSoc to discover events, meet fellow beverage enthusiasts, and explore the art of drinks at UNSW Sydney.",
   keywords: [
-    // Primary brand
     "BevSoc",
+    "UNSW BevSoc",
     "bevsoc",
     "BevSoc UNSW",
     "UNSW BevSoc",
     "bevsoc unsw",
     "unsw bevsoc",
-    // Abbreviations
-    "BSoc",
-    "bsoc",
-    "BSoc UNSW",
-    "UNSW BSoc",
-    "bsoc unsw",
-    "unsw bsoc",
-    "b soc",
-    "b-soc",
-    "b soc unsw",
     // Spaced / hyphenated
     "Bev Soc",
     "bev soc",
@@ -202,15 +192,6 @@ export const metadata: Metadata = {
     google: "jzpNqT957sqnY2DG3hien95yS3QWE2PwbJghqnYoJGs",
   },
   applicationName: "BevSoc UNSW",
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-  },
   manifest: "/manifest.json",
   metadataBase: new URL(SITE_URL),
   alternates: {
