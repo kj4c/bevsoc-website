@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About BevSoc UNSW — Our Mission, Values & Team",
   description:
-    "Learn about BevSoc (BSoc / Bev Soc) — UNSW Sydney's Beverage Appreciation Society. Discover the mission, values, and executive team behind the Beverage Society at UNSW.",
+    "Learn about BevSoc UNSW — the Beverage Appreciation Society at the University of New South Wales. Discover the BevSoc mission, values, and executive team behind UNSW's official beverage society.",
   keywords: [
     "about BevSoc",
+    "about BevSoc UNSW",
     "BevSoc UNSW about",
     "about bevsoc",
     "about BSoc",
-    "about bsoc",
     "about Bev Soc",
-    "about bev soc",
     "BevSoc team",
+    "BevSoc UNSW team",
     "BSoc team",
     "BevSoc mission",
+    "BevSoc UNSW mission",
+    "BevSoc values",
     "UNSW Beverage Society about",
     "BevSoc executives",
     "BSoc executives",
@@ -23,26 +25,32 @@ export const metadata: Metadata = {
     "UNSW Beverage Appreciation Society team",
     "who is bevsoc",
     "what is bevsoc",
+    "what is bevsoc unsw",
     "what is bsoc",
     "what is bev soc",
     "bevsoc team unsw",
-    "bsoc team unsw",
-    "society beverage about",
     "unsw beverage society about",
-    "bevsock about",
-    "bevsic about",
     "UNSW society about",
     "UNSW club about",
+    "bevsoc executive team",
+    "bevsoc committee",
+    "bevsoc unsw committee",
   ],
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About | BevSoc UNSW (BSoc)",
+    title: "About BevSoc UNSW — Beverage Appreciation Society",
     description:
-      "Learn about BevSoc (BSoc / Bev Soc) — UNSW Sydney's Beverage Appreciation Society. Our mission, values, and the team behind the Beverage Society at UNSW.",
+      "Learn about BevSoc UNSW — the Beverage Appreciation Society at UNSW Sydney. Our mission, values, and the executive team behind UNSW's beverage society.",
     url: "/about",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About BevSoc UNSW — Beverage Appreciation Society",
+    description:
+      "Learn about BevSoc UNSW — the Beverage Appreciation Society at UNSW Sydney. Our mission, values, and team.",
   },
 };
 
