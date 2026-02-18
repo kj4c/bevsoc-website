@@ -6,6 +6,7 @@ interface EventCardProps {
   description: string;
   category: string;
   variant?: 'beige' | 'maroon';
+  link?: string;
 }
 
 const categoryEmojis: Record<string, string> = {
@@ -30,6 +31,7 @@ export default function EventCard({
   description,
   category,
   variant = 'beige',
+  link,
 }: EventCardProps) {
   const isMaroon = variant === 'maroon';
   const formatDate = (dateStr: string) => {
@@ -41,9 +43,15 @@ export default function EventCard({
     });
   };
 
+  const Wrapper = link ? 'a' : 'div';
+  const wrapperProps = link
+    ? { href: link, target: '_blank' as const, rel: 'noopener noreferrer' }
+    : {};
+
   return (
-    <div
-      className={`p-4 sm:p-6 hover:-translate-y-1 transition-transform duration-200 rounded-lg ${
+    <Wrapper
+      {...wrapperProps}
+      className={`block p-4 sm:p-6 hover:-translate-y-1 transition-transform duration-200 rounded-lg cursor-pointer ${
         isMaroon
           ? 'bg-accent border-2 border-primary text-primary'
           : 'pixel-window border-l-4 border-accent'
@@ -101,7 +109,7 @@ export default function EventCard({
       >
         {description}
       </p>
-    </div>
+    </Wrapper>
   );
 }
 
