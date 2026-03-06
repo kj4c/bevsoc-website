@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollSnapController from "@/components/ScrollSnapController";
-
 const SITE_URL = "https://www.unswbevsoc.org";
 
 const superBubbly = localFont({
