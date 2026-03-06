@@ -1,5 +1,38 @@
 [
   {
+    "id": "5",
+    "title": "Director Meet & Greet BBQ",
+    "date": "2026-02-24",
+    "time": "12:00 PM - 2:00 PM",
+    "location": "Newton Lawn",
+    "description": "Free glizzys, new friends, and good vibes! Meet BevSoc's Directors from Creative, HR, Events, Productions, Sponsorships & IT. Whether you want to get involved, learn about our portfolios, or just want to eat — we've got you covered.",
+    "link": "https://www.instagram.com/p/DU5Klm1AYJz/",
+    "image": "/director_bbq_banner.png",
+    "category": "social"
+  },
+  {
+    "id": "4",
+    "title": "O-Week 2026",
+    "date": "2026-02-09",
+    "time": "All day",
+    "location": "The Quad",
+    "description": "BevSoc's FIRST-EVER O-Week appearance! Free drinks & tastings, stickers, silly straws, build-your-own keychains, food & drink vouchers, games, giveaways, mystery prizes, and guess-the-drink challenges. Sign up as a 2026 member for exclusive deals and discounted events!",
+    "link": "https://www.instagram.com/p/DUfZ8srkbgY/",
+    "image": "/oweek_banner.png",
+    "category": "social"
+  },
+  {
+    "id": "3",
+    "title": "Rewind Night",
+    "date": "2026-02-26",
+    "time": "7:00 PM",
+    "location": "1 Slip St",
+    "description": "Turn back time with FABSOC, RapSoc, BevSoc, FoodLoversSoc & DigiSoc! A high-energy throwback social powered by techno, hyperpop, and summer-inspired chaos. Dress code: Straight out of 2016. 18+ event, valid ID required.",
+    "link": "https://www.instagram.com/p/DUmlm1kE61l/",
+    "image": "/rewind_night_banner.png",
+    "category": "social"
+  },
+  {
     "id": "1",
     "title": "Build a Boba",
     "date": "2025-11-05",

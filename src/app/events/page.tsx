@@ -72,6 +72,7 @@ export default function EventsPage() {
                   location={event.location}
                   description={event.description}
                   category={event.category}
+                  link={event.link}
                   variant={i % 2 === 0 ? 'beige' : 'maroon'}
                 />
               ))}
