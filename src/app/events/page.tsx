@@ -1,6 +1,5 @@
 'use client';
 
-import EventCard from '@/components/EventCard';
 import PastEventsCarousel from '@/components/PastEventsCarousel';
 import LiquidEther from '@/components/LiquidEther';
 import eventsData from '@/data/events.json';
@@ -35,7 +34,7 @@ export default function EventsPage() {
   return (
     <div className="relative min-h-screen no-snap">
       {/* Upcoming Events Section */}
-      <section className="py-12 sm:py-16 pt-[calc(6rem+5rem)] sm:pt-[calc(6rem+4rem)] relative flex flex-col items-center overflow-visible">
+      <section className="pt-[calc(6rem+5rem)] sm:pt-[calc(6rem+4rem)] pb-6 sm:pb-10 relative flex flex-col items-center justify-center overflow-visible">
         <div className="absolute inset-0 -z-10">
           <LiquidEther
             colors={['#faf0e8', '#e8ddd4', '#e8ddd4']}
@@ -56,30 +55,18 @@ export default function EventsPage() {
             className="absolute inset-0 w-full h-full"
           />
         </div>
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full relative z-10 pt-4 sm:pt-0">
-          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent mb-3 sm:mb-6 text-center leading-tight">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center gap-4 sm:gap-2 pt-4 sm:pt-6 relative z-10">
+          <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent text-center leading-tight shrink-0">
             Upcoming Events
           </h1>
 
           {upcomingEvents.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-              {upcomingEvents.map((event, i) => (
-                <EventCard
-                  key={event.id}
-                  title={event.title}
-                  date={event.date}
-                  time={event.time}
-                  location={event.location}
-                  description={event.description}
-                  category={event.category}
-                  link={event.link}
-                  variant={i % 2 === 0 ? 'beige' : 'maroon'}
-                />
-              ))}
+            <div className="flex justify-center w-full flex-1 min-h-0 items-center">
+              <PastEventsCarousel events={upcomingEvents} />
             </div>
           ) : (
-            <div className="pixel-window p-8 text-center max-w-md mx-auto">
-              <p className="font-poppins text-base sm:text-xl text-accent">
+            <div className="p-8 text-center max-w-md mx-auto">
+              <p className="font-poppins text-base sm:text-xl text-primary">
                 No upcoming events right now. Check back soon!
               </p>
             </div>
