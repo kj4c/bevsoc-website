@@ -49,7 +49,7 @@ export default function PastEventsCarousel({ events }: { events: PastEvent[] }) 
   }, [safeIndex]);
 
   return (
-    <div className="w-full min-h-[280px] sm:min-h-[350px] lg:min-h-[400px] px-2 sm:px-8 lg:px-12 flex flex-col">
+    <div className="w-full min-h-[280px] sm:min-h-[350px] lg:min-h-[400px] px-4 sm:px-8 lg:px-12 flex flex-col">
       <div className="relative flex items-center justify-center gap-6 sm:gap-8 flex-1 min-h-0">
         {/* Prev button */}
         {events.length > itemsPerPage && itemsPerPage > 0 && (
