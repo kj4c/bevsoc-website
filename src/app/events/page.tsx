@@ -19,17 +19,26 @@ interface Event {
 export default function EventsPage() {
   const events: Event[] = eventsData;
 
+  const parseLocalDate = (yyyyMmDd: string) => {
+    const [y, m, d] = yyyyMmDd.split('-').map(Number);
+    return new Date(y, (m ?? 1) - 1, d ?? 1);
+  };
+
   // Sort events by date
   const sortedEvents = [...events].sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    (a, b) => parseLocalDate(a.date).getTime() - parseLocalDate(b.date).getTime()
   );
 
   // Separate upcoming and past events
-  const now = new Date();
-  const upcomingEvents = sortedEvents.filter((e) => new Date(e.date) >= now);
+  const todayStart = new Date();
+  todayStart.setHours(0, 0, 0, 0);
+
+  const upcomingEvents = sortedEvents.filter(
+    (e) => parseLocalDate(e.date) >= todayStart
+  );
   const pastEvents = [...sortedEvents]
-    .filter((e) => new Date(e.date) < now)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // most recent first
+    .filter((e) => parseLocalDate(e.date) < todayStart)
+    .sort((a, b) => parseLocalDate(b.date).getTime() - parseLocalDate(a.date).getTime()); // most recent first
 
   return (
     <div className="relative min-h-screen no-snap">
@@ -55,7 +64,7 @@ export default function EventsPage() {
             className="absolute inset-0 w-full h-full"
           />
         </div>
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center gap-4 sm:gap-2 pt-4 sm:pt-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center gap-4 sm:gap-2 pt-4 sm:pt-6 relative z-10">
           <h1 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-accent text-center leading-tight shrink-0">
             Upcoming Events
           </h1>
@@ -66,7 +75,7 @@ export default function EventsPage() {
             </div>
           ) : (
             <div className="p-8 text-center max-w-md mx-auto">
-              <p className="font-poppins text-base sm:text-xl text-primary">
+              <p className="font-poppins text-base sm:text-xl text-accent">
                 No upcoming events right now. Check back soon!
               </p>
             </div>
@@ -77,7 +86,7 @@ export default function EventsPage() {
       {/* Past Events Section */}
       {pastEvents.length > 0 && (
         <section className="pt-6 pb-4 sm:py-6 relative bg-accent flex flex-col items-center justify-center overflow-visible py-8 sm:py-12">
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center gap-4 sm:gap-2">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center gap-4 sm:gap-2">
             <h2 className="font-perandory text-4xl sm:text-6xl lg:text-8xl text-primary text-center leading-tight shrink-0">
               Past Events
             </h2>
